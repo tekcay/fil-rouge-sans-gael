@@ -1,6 +1,5 @@
 package com.api.entities;
 
-import jakarta.persistence.OneToMany;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -22,6 +21,10 @@ public class Formateur {
 
     @OneToMany(mappedBy = "evaluationForm")
     private List<EvaluationForm> evaluationFormList;
+
+    @OneToOne
+    private Formation formation;
+
 
     public Formateur() {
     }

@@ -2,10 +2,21 @@ package com.api.entities;
 
 import lombok.Data;
 
+import javax.persistence.*;
 import java.util.List;
 @Data
+@Entity
+@Table(name = "formation")
 public class Formation {
+
+    @Id
+    @GeneratedValue
+    @Column(name = "id_formation")
     private int id;
+
+    @OneToOne
+    private Formateur formateur;
+
     private boolean isConfirmed;
     private int minParticipants;
     private int nbParticipants;
