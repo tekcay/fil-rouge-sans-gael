@@ -24,7 +24,10 @@ public class Formation {
     private List<Formateur> formateurs;
     private boolean isInterEntreprise;
     private String link;
+
+    @OneToMany(mappedBy = "seance")
     private List<Seance>seances;
+
     private double prix;
     private Theme theme;
     private List<STheme> sThemes;

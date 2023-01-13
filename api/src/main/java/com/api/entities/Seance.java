@@ -19,6 +19,10 @@ public class Seance {
     @OneToOne
     private Salle salle;
 
+    @ManyToOne
+    @JoinColumn(name = "id_formation")
+    private Formation formation;
+
     public Seance() {
     }
 }
