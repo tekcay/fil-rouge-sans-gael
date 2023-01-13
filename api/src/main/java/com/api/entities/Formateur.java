@@ -23,6 +23,7 @@ public class Formateur {
     private List<EvaluationForm> evaluationFormList;
 
     @OneToOne
+    @JoinColumn(name = "id_formation", referencedColumnName = "id_formateur")
     private Formation formation;
 
 

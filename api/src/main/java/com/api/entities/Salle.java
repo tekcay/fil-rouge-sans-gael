@@ -13,6 +13,7 @@ public class Salle {
     @GeneratedValue
     @Column(name = "id_salle")
     private int id;
+
     private String adresse;
     private int number;
 

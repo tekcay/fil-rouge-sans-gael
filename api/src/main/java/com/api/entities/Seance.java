@@ -19,6 +19,7 @@ public class Seance {
     private Date fin;
 
     @OneToOne
+    @JoinColumn(name = "id_salle", referencedColumnName = "id_seance")
     private Salle salle;
 
     @ManyToOne
