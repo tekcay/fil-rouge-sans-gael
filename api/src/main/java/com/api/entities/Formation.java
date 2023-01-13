@@ -21,7 +21,6 @@ public class Formation {
     private int minParticipants;
     private int nbParticipants;
     private boolean isPerso;
-    private List<Formateur> formateurs;
     private boolean isInterEntreprise;
     private String link;
 
@@ -33,6 +32,9 @@ public class Formation {
     @ManyToOne
     @JoinColumn(name = "id_theme")
     private Theme theme;
+
+    @ManyToMany(mappedBy = "stagiaire")
+    private List<Stagiaire> stagiaireList;
 
     private List<STheme> sThemes;
     private List<SsTheme> ssThemes;

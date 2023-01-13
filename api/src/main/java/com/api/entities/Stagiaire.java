@@ -1,18 +1,17 @@
 package com.api.entities;
 
-
-
-import ch.qos.logback.core.joran.sanity.Pair;
 import javax.persistence.*;
 import lombok.Data;
 
 import java.util.List;
 @Data
 @Entity
+@Table(name = "stagiaire")
 public class Stagiaire {
 
     @Id
     @GeneratedValue
+    @Column(name = "id_stagiaire")
     private int id;
 
     @Column(nullable = false)
@@ -20,7 +19,13 @@ public class Stagiaire {
 
     @Column(nullable = false)
     private String mail;
-    private List<Pair<Formation,Integer>> formationsNote;
+
+    @ManyToMany
+    @JoinTable(name= "stagiaire_formation",
+            joinColumns = @JoinColumn(name="id_stagiaire"),
+            inverseJoinColumns = @JoinColumn(name="id_formation"))
+    private List<Formation> formationList;
+
     private boolean isPro;
 
     @ManyToOne
