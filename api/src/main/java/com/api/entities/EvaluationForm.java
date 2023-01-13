@@ -1,12 +1,21 @@
 package com.api.entities;
 
+
+
 import lombok.Data;
 
+import javax.persistence.*;
 import java.util.List;
 @Data
+@Entity
 public class EvaluationForm {
+
+    @Id
+    @GeneratedValue
     private int id;
-    private List<Evaluation> evaluations;
+
+    @OneToMany(mappedBy = "evaluationForm")
+    private List<Evaluation> evaluationsList;
     private boolean isRecommended;
 
     private String other;

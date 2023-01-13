@@ -3,7 +3,7 @@ package com.api.entities;
 
 
 import ch.qos.logback.core.joran.sanity.Pair;
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.Data;
 
 import java.util.List;
