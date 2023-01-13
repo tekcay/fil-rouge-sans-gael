@@ -29,7 +29,11 @@ public class Formation {
     private List<Seance>seances;
 
     private double prix;
+
+    @ManyToOne
+    @JoinColumn(name = "id_theme")
     private Theme theme;
+
     private List<STheme> sThemes;
     private List<SsTheme> ssThemes;
 
