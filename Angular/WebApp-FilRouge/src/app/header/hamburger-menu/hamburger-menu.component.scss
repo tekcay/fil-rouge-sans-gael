@@ -38,7 +38,7 @@ body {
 
 .navbar .nav-container a {
   text-decoration: none;
-  color: #0e2431;
+  color: #FF9950;
   font-weight: 500;
   font-size: 1.2rem;
   padding: 0.7rem;
@@ -105,9 +105,10 @@ body {
 }
 
 .navbar .menu-items {
-  padding-top: 50px;
+  padding-top: 60px;
+  border-radius: 2%;
   background-color: white;
-  height: 40vh;
+  height: 60vh;
   width: 15vw;
   transform: translate(-150%);
   display: flex;
