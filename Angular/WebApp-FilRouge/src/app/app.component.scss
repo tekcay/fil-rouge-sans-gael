@@ -4,6 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url("./media/bgOrange.png");
 }
 
 .header{
@@ -17,7 +18,11 @@
 }
 
 .footer{
-  width: 100%;
+  width: 60%;
   height: 70px;
+  display: flex;
+  flex-direction: column;
   background-color: #120C32;
+  border-radius: 32px;
+  border: 2px solid #FF9950;
 }
