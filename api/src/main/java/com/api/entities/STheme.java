@@ -6,9 +6,9 @@ import java.util.List;
 
 @Data
 public class STheme {
-    int id;
-    String name;
-    List<SsTheme> ssThemes;
+    private int id;
+    private String name;
+    private List<SsTheme> ssThemes;
 
     public STheme() {
     }

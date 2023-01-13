@@ -4,9 +4,9 @@ import lombok.Data;
 
 @Data
 public class Salle {
-    int id;
-    String adresse;
-    int number;
+    private int id;
+    private String adresse;
+    private int number;
 
     public Salle() {
     }

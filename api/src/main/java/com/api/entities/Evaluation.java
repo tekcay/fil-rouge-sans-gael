@@ -4,9 +4,9 @@ import lombok.Data;
 
 @Data
 public class Evaluation {
-    int id;
-    String name;
-    int note;
+    private int id;
+    private String name;
+    private int note;
 
     public Evaluation() {
     }

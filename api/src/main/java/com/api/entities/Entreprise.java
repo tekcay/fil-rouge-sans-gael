@@ -4,9 +4,9 @@ import lombok.Data;
 
 @Data
 public class Entreprise {
-    int id;
-    String mail;
-    String name;
+    private int id;
+    private String mail;
+    private String name;
 
     public Entreprise() {
     }

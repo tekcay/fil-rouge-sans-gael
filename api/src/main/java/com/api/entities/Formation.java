@@ -5,19 +5,19 @@ import lombok.Data;
 import java.util.List;
 @Data
 public class Formation {
-    int id;
-    boolean isConfirmed;
-    int minParticipants;
-    int nbParticipants;
-    boolean isPerso;
-    List<Formateur> formateurs;
-    boolean isInterEntreprise;
-    String link;
-    List<Seance>seances;
-    double prix;
-    Theme theme;
-    List<STheme> sThemes;
-    List<SsTheme> ssThemes;
+    private int id;
+    private boolean isConfirmed;
+    private int minParticipants;
+    private int nbParticipants;
+    private boolean isPerso;
+    private List<Formateur> formateurs;
+    private boolean isInterEntreprise;
+    private String link;
+    private List<Seance>seances;
+    private double prix;
+    private Theme theme;
+    private List<STheme> sThemes;
+    private List<SsTheme> ssThemes;
 
     public Formation() {
     }

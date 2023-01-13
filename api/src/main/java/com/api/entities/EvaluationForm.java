@@ -5,11 +5,11 @@ import lombok.Data;
 import java.util.List;
 @Data
 public class EvaluationForm {
-    int id;
-    List<Evaluation> evaluations;
-    boolean isRecommended;
+    private int id;
+    private List<Evaluation> evaluations;
+    private boolean isRecommended;
 
-    String other;
+    private String other;
 
     public EvaluationForm() {
     }

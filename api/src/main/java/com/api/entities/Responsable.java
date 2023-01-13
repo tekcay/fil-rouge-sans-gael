@@ -4,9 +4,9 @@ import lombok.Data;
 
 @Data
 public class Responsable {
-    int id;
-    String name;
-    String mail;
+    private int id;
+    private String name;
+    private String mail;
 
     public Responsable(){
     }

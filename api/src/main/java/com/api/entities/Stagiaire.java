@@ -8,12 +8,12 @@ import lombok.Data;
 import java.util.List;
 @Data
 public class Stagiaire {
-    int id;
-    String name;
-    String mail;
-    List<Pair<Formation,Integer>> formationsNote;
+    private int id;
+    private String name;
+    private String mail;
+    private List<Pair<Formation,Integer>> formationsNote;
     private boolean isPro;
-    Entreprise Entreprise;
+    private Entreprise Entreprise;
 
     public Stagiaire() {
     }
