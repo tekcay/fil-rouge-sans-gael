@@ -7,7 +7,7 @@ import java.util.List;
 public class Theme {
     int id;
     String name;
-    List<STheme>sThemes;
+    List<STheme> sThemes;
 
     public Theme() {
     }

@@ -10,14 +10,14 @@ public class Formation {
     int minParticipants;
     int nbParticipants;
     boolean isPerso;
-    List<Formateur>formateurs;
+    List<Formateur> formateurs;
     boolean isInterEntreprise;
     String link;
     List<Seance>seances;
     double prix;
     Theme theme;
-    List<STheme>sThemes;
-    List<SsTheme>ssThemes;
+    List<STheme> sThemes;
+    List<SsTheme> ssThemes;
 
     public Formation() {
     }
