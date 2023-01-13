@@ -1,0 +1,27 @@
+.button-body{
+  font-family: "Poppins", sans-serif;
+  display:flex;
+  flex-direction: column;
+  transition-duration: 0.4s;
+  height: 60px;
+  width: 70%;
+  justify-content: space-around;
+  font-size: 1.2rem;
+  margin-left: 32px;
+}
+
+.linkButton{
+  height: 50%;
+  border-radius: 5%;
+  color: white;
+  background-color: #FF9950;
+  text-align: center;
+  vertical-align:middle ;
+  margin-bottom: 10px;
+}
+
+.linkButton:hover {
+  background-color: #ff7000;
+}
+
+
