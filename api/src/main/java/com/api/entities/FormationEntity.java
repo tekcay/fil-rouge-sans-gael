@@ -15,8 +15,8 @@ public class FormationEntity {
     List<Seance>seances;
     double prix;
     Theme theme;
-    List<Stheme>sThemes;
-    List<Sstheme>ssthemes;
+    List<STheme>sThemes;
+    List<SsTheme>ssThemes;
 
     public FormationEntity() {
     }
