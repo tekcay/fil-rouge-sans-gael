@@ -4,13 +4,13 @@ import lombok.Data;
 
 import java.util.List;
 @Data
-public class EvaluationFormEntity {
+public class EvaluationForm {
     int id;
     List<Evaluation>evaluations;
     boolean isRecommended;
 
     String other;
 
-    public EvaluationFormEntity() {
+    public EvaluationForm() {
     }
 }

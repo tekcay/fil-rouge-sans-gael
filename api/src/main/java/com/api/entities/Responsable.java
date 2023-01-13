@@ -3,11 +3,10 @@ package com.api.entities;
 import lombok.Data;
 
 @Data
-public class EntrepriseEntity {
+public class Responsable {
     int id;
-    String mail;
     String name;
-
-    public EntrepriseEntity() {
+    String mail;
+    public Responsable(){
     }
 }

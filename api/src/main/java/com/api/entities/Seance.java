@@ -4,12 +4,12 @@ import lombok.Data;
 
 import java.util.Date;
 @Data
-public class SeanceEntity {
+public class Seance {
     int id;
     Date debut;
     Date fin;
     Salle salle;
 
-    public SeanceEntity() {
+    public Seance() {
     }
 }

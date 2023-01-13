@@ -3,11 +3,11 @@ package com.api.entities;
 import lombok.Data;
 
 @Data
-public class SalleEntity {
+public class Salle {
     int id;
     String adresse;
     int number;
 
-    public SalleEntity() {
+    public Salle() {
     }
 }

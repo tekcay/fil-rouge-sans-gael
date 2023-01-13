@@ -4,11 +4,11 @@ import lombok.Data;
 
 import java.util.List;
 @Data
-public class ThemeEntity {
+public class Theme {
     int id;
     String name;
     List<STheme>sThemes;
 
-    public ThemeEntity() {
+    public Theme() {
     }
 }

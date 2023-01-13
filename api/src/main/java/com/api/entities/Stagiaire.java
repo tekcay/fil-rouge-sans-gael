@@ -7,7 +7,7 @@ import lombok.Data;
 
 import java.util.List;
 @Data
-public class StagiaireEntity {
+public class Stagiaire {
     int id;
     String name;
     String mail;
@@ -15,6 +15,7 @@ public class StagiaireEntity {
     private boolean isPro;
     Entreprise Entreprise;
 
-    public class StagiaireEntity(){
+    public Stagiaire() {
     }
+
 }

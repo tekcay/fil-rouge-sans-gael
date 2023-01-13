@@ -4,7 +4,7 @@ import lombok.Data;
 
 import java.util.List;
 @Data
-public class FormationEntity {
+public class Formation {
     int id;
     boolean isConfirmed;
     int minParticipants;
@@ -19,6 +19,6 @@ public class FormationEntity {
     List<STheme>sThemes;
     List<SsTheme>ssThemes;
 
-    public FormationEntity() {
+    public Formation() {
     }
 }
