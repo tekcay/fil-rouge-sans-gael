@@ -14,7 +14,7 @@ public class ApiApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ApiApplication.class, args);
 
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("fil-rouge");
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("fil_rouge");
 		EntityManager em = emf.createEntityManager();
 		EntityTransaction transaction = em.getTransaction();
 
