@@ -10,6 +10,8 @@ import { HamburgerMenuComponent } from './header/hamburger-menu/hamburger-menu.c
 import { ButtonsComponent } from './header/hamburger-menu/buttons/buttons.component';
 import { FooterComponent } from './footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { WebsiteLogoComponent } from './header/website-logo/website-logo.component';
+import { LinksComponent } from './footer/links/links.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     CardsComponent,
     SearchbarComponent,
     HamburgerMenuComponent,
-    ButtonsComponent
+    ButtonsComponent,
+    WebsiteLogoComponent,
+    LinksComponent
   ],
   imports: [
     BrowserModule,
