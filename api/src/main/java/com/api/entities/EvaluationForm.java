@@ -21,6 +21,10 @@ public class EvaluationForm {
 
     private String other;
 
+    @ManyToOne
+    @JoinColumn(name = "id_formateur")
+    private Formateur formateur;
+
     public EvaluationForm() {
     }
 }
