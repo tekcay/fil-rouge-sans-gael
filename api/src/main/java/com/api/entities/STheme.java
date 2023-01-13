@@ -19,8 +19,14 @@ public class STheme {
     @JoinColumn(name = "id_theme")
     private Theme theme;
 
-    private String name;
+    @ManyToMany
+    @JoinTable(name= "sTheme_sSTheme",
+            joinColumns = @JoinColumn(name="id_sTheme"),
+            inverseJoinColumns = @JoinColumn(name="id_sSTheme"))
     private List<SsTheme> ssThemes;
+
+    private String name;
+
 
     public STheme() {
     }
