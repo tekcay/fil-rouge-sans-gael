@@ -3,11 +3,10 @@ package com.api.entities;
 import lombok.Data;
 
 @Data
-public class EvaluationEntity {
+public class SsTheme {
     int id;
     String name;
-    int note;
 
-    public EvaluationEntity() {
+    public SsTheme() {
     }
 }

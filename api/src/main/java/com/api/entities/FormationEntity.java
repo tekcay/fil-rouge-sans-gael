@@ -5,6 +5,7 @@ import lombok.Data;
 import java.util.List;
 @Data
 public class FormationEntity {
+    int id;
     boolean isConfirmed;
     int minParticipants;
     int nbParticipants;
