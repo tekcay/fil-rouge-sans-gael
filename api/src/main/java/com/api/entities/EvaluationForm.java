@@ -8,6 +8,7 @@ import javax.persistence.*;
 import java.util.List;
 @Data
 @Entity
+@Table(name = "evaluationForm")
 public class EvaluationForm {
 
     @Id
