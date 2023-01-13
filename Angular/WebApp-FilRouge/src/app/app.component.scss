@@ -1,4 +1,23 @@
 .app{
-  height: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.header{
+  width: 100%;
+  height: 13%;
+}
+
+.corpus{
+  width: 100%;
+  height: 77%;
+}
+
+.footer{
+  width: 100%;
+  height: 70px;
+  background-color: #120C32;
 }

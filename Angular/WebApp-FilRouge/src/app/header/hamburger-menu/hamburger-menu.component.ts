@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./hamburger-menu.component.scss']
 })
 export class HamburgerMenuComponent {
-
 }
