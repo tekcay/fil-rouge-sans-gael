@@ -7,6 +7,7 @@ public class Responsable {
     int id;
     String name;
     String mail;
+
     public Responsable(){
     }
 }

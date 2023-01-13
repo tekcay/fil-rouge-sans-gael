@@ -11,6 +11,7 @@ public class Formateur {
     private String mail;
     private int experience;
     private List<Evaluation> notes;
+
     public Formateur() {
     }
 }
