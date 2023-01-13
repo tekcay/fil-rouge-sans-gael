@@ -4,6 +4,8 @@ import javax.persistence.*;
 import lombok.Data;
 
 import java.util.Date;
+import java.util.List;
+
 @Data
 @Entity
 @Table(name = "seance")
@@ -22,6 +24,9 @@ public class Seance {
     @ManyToOne
     @JoinColumn(name = "id_formation")
     private Formation formation;
+
+    @OneToMany(mappedBy = "evaluationForm")
+    private List<EvaluationForm> evaluationFormList;
 
     public Seance() {
     }

@@ -25,6 +25,10 @@ public class EvaluationForm {
     @JoinColumn(name = "id_formateur")
     private Formateur formateur;
 
+    @ManyToOne
+    @JoinColumn(name = "id_seance")
+    private Seance seance;
+
     public EvaluationForm() {
     }
 }
