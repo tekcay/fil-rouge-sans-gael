@@ -1,0 +1,31 @@
+.search{
+  position:relative;
+  justify-content: flex-end;
+  width: 50px;
+  height: 50px;
+  border-radius: 5%;
+  padding: 10px;
+  transition-duration: 500ms;
+  cursor: pointer;
+  font-size: 15px;
+  border: 1px solid white;
+  background-image: url(./icons/search-white.png);
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: 45% 50%;
+}
+.search:hover{
+  border: 1px solid #FF9950
+}
+.search:focus{
+  width: 10vw;
+  cursor: text;
+  padding-left: 40px;
+  color: #FF9950;
+  outline: none;
+  background-color: white;
+  border: 1px solid #FF9950;
+  background-size: 22px;
+  background-position: 10px 50%;
+}

@@ -1,0 +1,24 @@
+.button-body{
+  transition-duration: 0.4s;
+  height: 90%;
+  width: 200px;
+  border-radius: 2%;
+  margin: 0;
+  position:relative;
+  vertical-align: middle;
+}
+
+.linkButton{
+  height: 100%;
+  border-radius: 2%;
+  color: white;
+  background-color: #FF9950;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.linkButton:hover {
+  background-color: #ff7000;
+}
+
+
