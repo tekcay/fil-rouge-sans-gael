@@ -13,7 +13,10 @@ public class Theme {
     @GeneratedValue
     @Column(name = "id_theme")
     private int id;
+
     private String name;
+
+    @OneToMany(mappedBy = "sTheme")
     private List<STheme> sThemes;
 
     @OneToMany(mappedBy = "formation")
