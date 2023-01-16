@@ -21,6 +21,7 @@ import { UserProfileComponent } from './corpus/user-profile/user-profile.compone
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
+import { RegisterFormComponent } from './corpus/register-form/register-form.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { HomeComponent } from './home/home.component';
     SearchFormaComponent,
     CreateFormaComponent,
     UserProfileComponent,
-    HomeComponent
+    HomeComponent,
+    RegisterFormComponent
   ],
   imports: [
     BrowserModule,

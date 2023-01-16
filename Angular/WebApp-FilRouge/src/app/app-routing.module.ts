@@ -7,7 +7,7 @@ import { CreateFormaComponent } from './corpus/create-forma/create-forma.compone
 import { ListFormaComponent } from './corpus/list-forma/list-forma.component';
 import { SearchFormaComponent } from './corpus/search-forma/search-forma.component';
 import { UserProfileComponent } from './corpus/user-profile/user-profile.component';
-
+import { RegisterFormComponent } from './corpus/register-form/register-form.component';
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -15,9 +15,8 @@ const routes: Routes = [
     { path: 'create', component: CreateFormaComponent },
     { path: 'liste', component: ListFormaComponent },
     { path: 'search', component: SearchFormaComponent },
-    { path: 'profile', component: UserProfileComponent }
-
-
+    { path: 'profile', component: UserProfileComponent },
+    { path: 'register', component: RegisterFormComponent }
 ];
 
 @NgModule({
