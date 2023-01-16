@@ -18,7 +18,7 @@ public class Evaluation {
     private String name;
     private int note;
 
-    @ManyToOne
+    @ManyToOne(targetEntity = EvaluationForm.class)
     @JoinColumn(name = "id_evaluationForm")
     private List<EvaluationForm> evaluationFormList;
 

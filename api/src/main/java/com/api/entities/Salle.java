@@ -17,7 +17,7 @@ public class Salle {
     private String adresse;
     private int number;
 
-    @OneToOne
+    @OneToOne(targetEntity = Seance.class)
     private Seance seance;
 
     public Salle() {

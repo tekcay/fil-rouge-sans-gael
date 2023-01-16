@@ -19,11 +19,11 @@ public class Formateur {
     private String mail;
     private int experience;
 
-    @OneToMany(mappedBy = "evaluationForm")
+    @OneToMany(mappedBy = "formateur")
     private List<EvaluationForm> evaluationFormList;
 
-    @OneToOne
-    @JoinColumn(name = "id_formation", referencedColumnName = "id_formateur")
+    @OneToOne(targetEntity = Formation.class)
+    @JoinColumn(name = "id_formation")
     private Formation formation;
 
 

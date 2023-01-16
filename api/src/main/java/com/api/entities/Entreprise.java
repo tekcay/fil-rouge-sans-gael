@@ -14,8 +14,10 @@ public class Entreprise {
     @GeneratedValue
     @Column(name = "id_entreprise")
     private int id;
+
     private String mail;
     private String name;
+
     @OneToMany(mappedBy = "entreprise")
     private List<Stagiaire> stagiaireList;
 

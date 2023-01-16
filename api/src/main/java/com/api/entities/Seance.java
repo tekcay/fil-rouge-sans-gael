@@ -18,15 +18,15 @@ public class Seance {
     private Date debut;
     private Date fin;
 
-    @OneToOne
-    @JoinColumn(name = "id_salle", referencedColumnName = "id_seance")
+    @OneToOne(targetEntity = Salle.class)
+    @JoinColumn(name = "id_salle")
     private Salle salle;
 
-    @ManyToOne
+    @ManyToOne(targetEntity = Formation.class)
     @JoinColumn(name = "id_formation")
     private Formation formation;
 
-    @OneToMany(mappedBy = "evaluationForm")
+    @OneToMany(mappedBy = "seance")
     private List<EvaluationForm> evaluationFormList;
 
     public Seance() {

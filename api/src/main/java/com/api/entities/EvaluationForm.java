@@ -16,17 +16,17 @@ public class EvaluationForm {
     @Column(name = "id_evaluationForm")
     private int id;
 
-    @OneToMany(mappedBy = "evaluation")
+    @OneToMany(mappedBy = "evaluationFormList")
     private List<Evaluation> evaluationsList;
     private boolean isRecommended;
 
     private String other;
 
-    @ManyToOne
+    @ManyToOne(targetEntity = Formateur.class)
     @JoinColumn(name = "id_formateur")
     private Formateur formateur;
 
-    @ManyToOne
+    @ManyToOne(targetEntity = Seance.class)
     @JoinColumn(name = "id_seance")
     private Seance seance;
 

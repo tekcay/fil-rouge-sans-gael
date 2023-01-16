@@ -16,7 +16,7 @@ public class SsTheme {
     private int id;
     private String name;
 
-    @ManyToMany(mappedBy = "sTheme")
+    @ManyToMany(mappedBy = "ssThemes")
     private List<STheme> sThemeList;
 
     public SsTheme() {

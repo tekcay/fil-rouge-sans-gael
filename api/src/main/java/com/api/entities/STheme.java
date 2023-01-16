@@ -15,11 +15,11 @@ public class STheme {
     @Column(name = "id_sTheme")
     private int id;
 
-    @ManyToOne
+    @ManyToOne(targetEntity = Theme.class)
     @JoinColumn(name = "id_theme")
     private Theme theme;
 
-    @ManyToMany
+    @ManyToMany(targetEntity = SsTheme.class)
     @JoinTable(name= "sTheme_sSTheme",
             joinColumns = @JoinColumn(name="id_sTheme"),
             inverseJoinColumns = @JoinColumn(name="id_sSTheme"))

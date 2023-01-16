@@ -18,6 +18,8 @@ public class ApiApplication {
 		EntityManager em = emf.createEntityManager();
 		EntityTransaction transaction = em.getTransaction();
 
+		transaction.begin();
+		transaction.commit();
 		em.close();
 		emf.close();
 	}

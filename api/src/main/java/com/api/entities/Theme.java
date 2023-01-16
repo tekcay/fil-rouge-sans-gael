@@ -16,10 +16,10 @@ public class Theme {
 
     private String name;
 
-    @OneToMany(mappedBy = "sTheme")
+    @OneToMany(mappedBy = "theme")
     private List<STheme> sThemes;
 
-    @OneToMany(mappedBy = "formation")
+    @OneToMany(mappedBy = "theme")
     private List<Formation> formationList;
 
     public Theme() {

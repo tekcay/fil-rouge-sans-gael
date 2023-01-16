@@ -14,7 +14,7 @@ public class Formation {
     @Column(name = "id_formation")
     private int id;
 
-    @OneToOne
+    @OneToOne(targetEntity = Formateur.class, mappedBy = "formation")
     private Formateur formateur;
 
     private boolean isConfirmed;
@@ -24,16 +24,16 @@ public class Formation {
     private boolean isInterEntreprise;
     private String link;
 
-    @OneToMany(mappedBy = "seance")
-    private List<Seance>seances;
+    @OneToMany(mappedBy = "formation")
+    private List<Seance> seances;
 
     private double prix;
 
-    @ManyToOne
+    @ManyToOne(targetEntity = Theme.class)
     @JoinColumn(name = "id_theme")
     private Theme theme;
 
-    @ManyToMany(mappedBy = "stagiaire")
+    @ManyToMany(mappedBy = "formationList")
     private List<Stagiaire> stagiaireList;
 
     private List<STheme> sThemes;

@@ -20,7 +20,7 @@ public class Stagiaire {
     @Column(nullable = false)
     private String mail;
 
-    @ManyToMany
+    @ManyToMany(targetEntity = Formation.class)
     @JoinTable(name= "stagiaire_formation",
             joinColumns = @JoinColumn(name="id_stagiaire"),
             inverseJoinColumns = @JoinColumn(name="id_formation"))
@@ -28,9 +28,9 @@ public class Stagiaire {
 
     private boolean isPro;
 
-    @ManyToOne
+    @ManyToOne(targetEntity = Entreprise.class)
     @JoinColumn(name = "id_entreprise")
-    private Entreprise Entreprise;
+    private Entreprise entreprise;
 
 
     public Stagiaire() {
