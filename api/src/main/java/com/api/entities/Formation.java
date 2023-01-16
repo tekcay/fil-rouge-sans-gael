@@ -36,7 +36,10 @@ public class Formation {
     @ManyToMany(mappedBy = "formationList")
     private List<Stagiaire> stagiaireList;
 
+    @ManyToMany(targetEntity = STheme.class)
     private List<STheme> sThemes;
+
+    @ManyToMany(targetEntity = SsTheme.class)
     private List<SsTheme> ssThemes;
 
     public Formation() {

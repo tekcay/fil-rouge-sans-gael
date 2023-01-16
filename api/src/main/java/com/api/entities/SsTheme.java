@@ -19,6 +19,12 @@ public class SsTheme {
     @ManyToMany(mappedBy = "ssThemes")
     private List<STheme> sThemeList;
 
+    @ManyToMany(targetEntity = Formation.class)
+    @JoinTable(name= "sSTheme_formation",
+            joinColumns = @JoinColumn(name="id_sSTheme"),
+            inverseJoinColumns = @JoinColumn(name="id_formation"))
+    private List<SsTheme> formations;
+
     public SsTheme() {
     }
 }
