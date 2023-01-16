@@ -10,17 +10,12 @@ import { UserProfileComponent } from './corpus/user-profile/user-profile.compone
 
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  {
-    path: 'cards',
-    component: CardsComponent,
-    children:[
-      { path: 'create', component: CreateFormaComponent },
-      { path: 'liste', component: ListFormaComponent },
-      { path: 'search', component: SearchFormaComponent },
-      { path: 'profile', component: UserProfileComponent }
-    ]
-  }
+    { path: 'home', component: HomeComponent },
+    { path: 'cards', component: CardsComponent},
+    { path: 'create', component: CreateFormaComponent },
+    { path: 'liste', component: ListFormaComponent },
+    { path: 'search', component: SearchFormaComponent },
+    { path: 'profile', component: UserProfileComponent }
 
 
 ];
