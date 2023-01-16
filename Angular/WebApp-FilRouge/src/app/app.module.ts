@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { CorpusComponent } from './corpus/corpus.component';
@@ -16,6 +18,8 @@ import { ListFormaComponent } from './corpus/list-forma/list-forma.component';
 import { SearchFormaComponent } from './corpus/search-forma/search-forma.component';
 import { CreateFormaComponent } from './corpus/create-forma/create-forma.component';
 import { UserProfileComponent } from './corpus/user-profile/user-profile.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -36,7 +40,10 @@ import { UserProfileComponent } from './corpus/user-profile/user-profile.compone
   ],
   imports: [
     BrowserModule,
-    NgbModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    AppRoutingModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
