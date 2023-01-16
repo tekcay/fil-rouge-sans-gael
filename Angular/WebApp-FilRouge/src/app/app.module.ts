@@ -12,6 +12,10 @@ import { FooterComponent } from './footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { WebsiteLogoComponent } from './header/website-logo/website-logo.component';
 import { LinksComponent } from './footer/links/links.component';
+import { ListFormaComponent } from './corpus/list-forma/list-forma.component';
+import { SearchFormaComponent } from './corpus/search-forma/search-forma.component';
+import { CreateFormaComponent } from './corpus/create-forma/create-forma.component';
+import { UserProfileComponent } from './corpus/user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import { LinksComponent } from './footer/links/links.component';
     HamburgerMenuComponent,
     ButtonsComponent,
     WebsiteLogoComponent,
-    LinksComponent
+    LinksComponent,
+    ListFormaComponent,
+    SearchFormaComponent,
+    CreateFormaComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
