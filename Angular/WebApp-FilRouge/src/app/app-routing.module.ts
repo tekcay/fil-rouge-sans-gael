@@ -9,7 +9,7 @@ import { UserProfileComponent } from './corpus/user-profile/user-profile.compone
 
 
 const routes: Routes = [
-  { path: 'home', component: CardsComponent },
+  { path: 'cards', component: CardsComponent },
   { path: 'create', component: CreateFormaComponent },
   { path: 'liste', component: ListFormaComponent },
   { path: 'search', component: SearchFormaComponent },
