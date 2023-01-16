@@ -2,18 +2,18 @@
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
     <persistence-unit name="fil_rouge">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-            <class>com.api.entites.Entreprise</class>
-            <class>com.api.entites.Evaluation</class>
-            <class>com.api.entites.EvaluationForm</class>
-            <class>com.api.entites.Formateur</class>
-            <class>com.api.entites.Formation</class>
-            <class>com.api.entites.Responsable</class>
-            <class>com.api.entites.Salle</class>
-            <class>com.api.entites.Seance</class>
-            <class>com.api.entites.SsTheme</class>
-            <class>com.api.entites.Stagiaire</class>
-            <class>com.api.entites.STheme</class>
-            <class>com.api.entites.Theme</class>
+            <class>com.api.entities.Entreprise</class>
+            <class>com.api.entities.Evaluation</class>
+            <class>com.api.entities.EvaluationForm</class>
+            <class>com.api.entities.Formateur</class>
+            <class>com.api.entities.Formation</class>
+            <class>com.api.entities.Responsable</class>
+            <class>com.api.entities.Salle</class>
+            <class>com.api.entities.Seance</class>
+            <class>com.api.entities.SsTheme</class>
+            <class>com.api.entities.Stagiaire</class>
+            <class>com.api.entities.STheme</class>
+            <class>com.api.entities.Theme</class>
 
 
         <properties>
