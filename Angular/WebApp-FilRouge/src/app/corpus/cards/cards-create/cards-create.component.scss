@@ -1,3 +1,33 @@
 .corps-create-forma{
-  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-items: center;
+}
+
+.title{
+  background-color: #120C32;
+  border: 2px solid #FF9950;
+  flex: 1;
+  transition: .2s;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 32px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.content{
+  background-color: #120C32;
+  border: 2px solid #FF9950;
+  flex: 1;
+  transition: .2s;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 32px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
