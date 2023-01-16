@@ -20,6 +20,7 @@ import { CreateFormaComponent } from './corpus/create-forma/create-forma.compone
 import { UserProfileComponent } from './corpus/user-profile/user-profile.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { AppRoutingModule } from './app-routing.module';
     ListFormaComponent,
     SearchFormaComponent,
     CreateFormaComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
