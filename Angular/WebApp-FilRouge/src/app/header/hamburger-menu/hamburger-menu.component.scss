@@ -25,7 +25,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 62px;
+  height: 10px;
 }
 
 .navbar .menu-items {
@@ -38,7 +38,7 @@ body {
 
 .navbar .nav-container a {
   text-decoration: none;
-  color: #0e2431;
+  color: #FF9950;
   font-weight: 500;
   font-size: 1.2rem;
   padding: 0.7rem;
@@ -105,17 +105,20 @@ body {
 }
 
 .navbar .menu-items {
-  padding-top: 50px;
+  padding-top: 60px;
+  border-radius: 32px;
   background-color: white;
-  height: 40vh;
+  opacity: 0.9;
+  height: 60vh;
   width: 15vw;
-  transform: translate(-150%);
+  transform: translate(-200%);
   display: flex;
   flex-direction: column;
   margin-left: -40px;
   padding-left: 40px;
   transition: transform 0.5s ease-in-out;
   text-align: center;
+  border: #FF9950 solid 2px;
 }
 
 .navbar .menu-items li {
