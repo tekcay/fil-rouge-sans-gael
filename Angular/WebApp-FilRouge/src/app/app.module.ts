@@ -25,6 +25,11 @@ import { RegisterFormComponent } from './corpus/register-form/register-form.comp
 import { PoliciesComponent } from './policies/policies.component';
 import { PropsectionComponent } from './propsection/propsection.component';
 import { StatsComponent } from './stats/stats.component';
+import { CardsListComponent } from './corpus/cards/cards-list/cards-list.component';
+import { CardsCreateComponent } from './corpus/cards/cards-create/cards-create.component';
+import { CardsAchievementComponent } from './corpus/cards/cards-achievement/cards-achievement.component';
+import { CardsSearchComponent } from './corpus/cards/cards-search/cards-search.component';
+import { CardsParamComponent } from './corpus/cards/cards-param/cards-param.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +51,12 @@ import { StatsComponent } from './stats/stats.component';
     RegisterFormComponent,
     PoliciesComponent,
     PropsectionComponent,
-    StatsComponent
+    StatsComponent,
+    CardsListComponent,
+    CardsCreateComponent,
+    CardsAchievementComponent,
+    CardsSearchComponent,
+    CardsParamComponent
   ],
   imports: [
     BrowserModule,
