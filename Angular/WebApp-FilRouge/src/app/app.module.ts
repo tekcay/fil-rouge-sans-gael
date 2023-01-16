@@ -22,6 +22,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { RegisterFormComponent } from './corpus/register-form/register-form.component';
+import { PoliciesComponent } from './policies/policies.component';
+import { PropsectionComponent } from './propsection/propsection.component';
+import { StatsComponent } from './stats/stats.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,10 @@ import { RegisterFormComponent } from './corpus/register-form/register-form.comp
     CreateFormaComponent,
     UserProfileComponent,
     HomeComponent,
-    RegisterFormComponent
+    RegisterFormComponent,
+    PoliciesComponent,
+    PropsectionComponent,
+    StatsComponent
   ],
   imports: [
     BrowserModule,

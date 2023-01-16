@@ -5,7 +5,7 @@
   color: white;
 }
 
-.item{
+.liste{
   height: 100%;
   padding: 10px;
   background-color: #120C32;
@@ -18,8 +18,116 @@
   border-radius: 32px;
   margin-right: 2px;
   margin-left: 2px;
+  background-image: url("../../media/formation.jpeg");
+  background-repeat: no-repeat;
+  background-size:auto;
 }
-.item:hover{
+
+.recherche{
+  height: 100%;
+  padding: 10px;
+  background-color: #120C32;
+  border: 2px solid #120C32;
+  flex: 1;
+  transition: .2s;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 32px;
+  margin-right: 2px;
+  margin-left: 2px;
+  background-image: url("../../media/rechercher.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.cree{
+  height: 100%;
+  padding: 10px;
+  background-color: #120C32;
+  border: 2px solid #120C32;
+  flex: 1;
+  transition: .2s;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 32px;
+  margin-right: 2px;
+  margin-left: 2px;
+  background-image: url("../../media/creer.jpeg");
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.avance{
+  height: 100%;
+  padding: 10px;
+  background-color: #120C32;
+  border: 2px solid #120C32;
+  flex: 1;
+  transition: .2s;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 32px;
+  margin-right: 2px;
+  margin-left: 2px;
+  background-image: url("../../media/experience.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.param{
+  height: 100%;
+  padding: 10px;
+  background-color: #120C32;
+  border: 2px solid #120C32;
+  flex: 1;
+  transition: .2s;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 32px;
+  margin-right: 2px;
+  margin-left: 2px;
+  background-image: url("../../media/paramètres.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.liste:hover{
   flex: 3;
   background-color: #FF9950;
+}
+.recherche:hover{
+  flex: 3;
+  background-color: #FF9950;
+}
+.cree:hover{
+  flex: 3;
+  background-color: #FF9950;
+}
+.avance:hover{
+  flex: 3;
+  background-color: #FF9950;
+}
+.param:hover{
+  flex: 3;
+  background-color: #FF9950;
+}
+
+.tag{
+  height: 50px;
+  background-color: #120C32;
+  border: 2px solid #FF9950;
+  flex: 1;
+  transition: .2s;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 32px;
+  margin-left: 10px;
+  margin-right: 10px;
+  position: absolute;
+  bottom: 15%;
 }

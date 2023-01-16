@@ -8,6 +8,9 @@ import { ListFormaComponent } from './corpus/list-forma/list-forma.component';
 import { SearchFormaComponent } from './corpus/search-forma/search-forma.component';
 import { UserProfileComponent } from './corpus/user-profile/user-profile.component';
 import { RegisterFormComponent } from './corpus/register-form/register-form.component';
+import { PoliciesComponent } from './policies/policies.component';
+import { PropsectionComponent } from './propsection/propsection.component';
+import { StatsComponent } from './stats/stats.component';
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -16,7 +19,10 @@ const routes: Routes = [
     { path: 'liste', component: ListFormaComponent },
     { path: 'search', component: SearchFormaComponent },
     { path: 'profile', component: UserProfileComponent },
-    { path: 'register', component: RegisterFormComponent }
+    { path: 'register', component: RegisterFormComponent },
+    { path: 'policies', component: PoliciesComponent },
+    { path: 'stats', component: StatsComponent },
+    { path: 'prospect', component: PropsectionComponent }
 ];
 
 @NgModule({
