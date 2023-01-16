@@ -1,6 +1,5 @@
 HELP.md
-target/classes/com
-target/generated-sources
+target/
 !.mvn/wrapper/maven-wrapper.jar
 
 ### Java ###
