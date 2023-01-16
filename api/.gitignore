@@ -3,6 +3,8 @@ target/classes/com
 target/generated-sources
 !.mvn/wrapper/maven-wrapper.jar
 
+### Java ###
+.class
 
 ### STS ###
 .apt_generated
