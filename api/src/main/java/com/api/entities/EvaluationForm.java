@@ -13,9 +13,10 @@ public class EvaluationForm {
 
     @Id
     @GeneratedValue
+    @Column(name = "id_evaluationForm")
     private int id;
 
-    @OneToMany(mappedBy = "evaluationForm")
+    @OneToMany(mappedBy = "evaluation")
     private List<Evaluation> evaluationsList;
     private boolean isRecommended;
 

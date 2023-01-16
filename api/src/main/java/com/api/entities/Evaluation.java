@@ -13,6 +13,7 @@ public class Evaluation {
 
     @Id
     @GeneratedValue
+    @Column(name = "id_evaluation")
     private int id;
     private String name;
     private int note;
