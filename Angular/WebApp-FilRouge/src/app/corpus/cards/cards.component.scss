@@ -1,4 +1,8 @@
 .box{
+  overflow:auto;
+}
+
+.cards-list{
   width: 100%;
   height: 75vh;
   display: flex;

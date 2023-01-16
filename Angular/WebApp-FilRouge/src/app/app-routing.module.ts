@@ -6,7 +6,6 @@ import { CardsComponent } from './corpus/cards/cards.component';
 import { CreateFormaComponent } from './corpus/create-forma/create-forma.component';
 import { ListFormaComponent } from './corpus/list-forma/list-forma.component';
 import { SearchFormaComponent } from './corpus/search-forma/search-forma.component';
-import { UserProfileComponent } from './corpus/user-profile/user-profile.component';
 import { RegisterFormComponent } from './corpus/register-form/register-form.component';
 import { PoliciesComponent } from './policies/policies.component';
 import { PropsectionComponent } from './propsection/propsection.component';
@@ -31,7 +30,6 @@ const routes: Routes = [
     { path: 'create', component: CreateFormaComponent },
     { path: 'liste', component: ListFormaComponent },
     { path: 'search', component: SearchFormaComponent },
-    { path: 'profile', component: UserProfileComponent },
     { path: 'register', component: RegisterFormComponent },
     { path: 'policies', component: PoliciesComponent },
     { path: 'stats', component: StatsComponent },
