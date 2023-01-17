@@ -1,7 +1,6 @@
 package com.api.controllers;
 
 import com.api.entities.Stagiaire;
-import com.api.exceptions.ResourceNotFoundException;
 import com.api.repositories.StagiaireRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

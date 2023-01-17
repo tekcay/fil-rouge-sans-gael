@@ -32,8 +32,4 @@ public class Stagiaire {
     @JoinColumn(name = "id_entreprise")
     private Entreprise entreprise;
 
-
-    public Stagiaire() {
-    }
-
 }
