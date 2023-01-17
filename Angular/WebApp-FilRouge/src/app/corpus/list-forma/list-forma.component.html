@@ -4,7 +4,8 @@
   </div>
   <div class="content">
     <li class="formation" *ngFor="let formation of formations">
-      <h2>id de la formation: {{formation.id}}</h2>
+      <h2>{{formation.name}}</h2>
+      <p>Description de la formation <br> {{formation.description}} </p>
       <p>theme: {{formation.theme}}<p>
       <p>prix: {{formation.price}}<p>
       <p>participants: {{formation.nbPart}}/{{formation.minPart}}</p>

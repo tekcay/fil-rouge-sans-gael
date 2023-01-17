@@ -6,6 +6,8 @@ import { ITheme } from "./theme";
 
 export interface IFormation {
   id:string;
+  name:string;
+  description:string;
   theme:ITheme;
   stheme:ISTheme[];
   sstheme:ISsTheme[];
