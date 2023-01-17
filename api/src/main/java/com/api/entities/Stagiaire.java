@@ -10,9 +10,13 @@ import java.util.List;
 public class Stagiaire {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_stagiaire")
     private int id;
+
+    private String login;
+
+    private String password;
 
     @Column(nullable = false)
     private String name;
@@ -26,14 +30,13 @@ public class Stagiaire {
             inverseJoinColumns = @JoinColumn(name="id_formation"))
     private List<Formation> formationList;
 
+    /**
+     * WARNING: column name in DB is {@code is_pro} !
+     */
     private boolean isPro;
 
     @ManyToOne(targetEntity = Entreprise.class)
     @JoinColumn(name = "id_entreprise")
     private Entreprise entreprise;
-
-
-    public Stagiaire() {
-    }
 
 }
