@@ -14,6 +14,10 @@ public class Stagiaire {
     @Column(name = "id_stagiaire")
     private int id;
 
+    private String login;
+
+    private String password;
+
     @Column(nullable = false)
     private String name;
 
