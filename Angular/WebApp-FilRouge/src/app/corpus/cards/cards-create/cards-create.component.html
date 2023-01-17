@@ -4,15 +4,12 @@
   </div>
   <div class="content">
     Pour créer une formation remplissez le formulaire suivant:
-    <form>
-      <div id="title_forma">
-        <label for="title-forma">Titre de la formation</label>
-        <input type="text" id="title-forma" name="title-forma">
-      </div>
-      <div id="desc_forma">
-        <label for="desc-forma">Description de la formation</label>
-        <input type="text" id="desc-forma" name="desc-forma">
-      </div>
-    </form>
+    <div [formGroup]="formation" (ngSubmit)="onSubmitFormation()">
+      <input type="number" placeholder="ID" name="id" ngModel/>
+      <input type="number" placeholder="minPart" name="minPart" ngModel/>
+      <input type="number" placeholder="nbPart" name="nbPart" ngModel/>
+      <input type="number" placeholder="price" name="price" ngModel/>
+      <button>Submit</button>
+    </div>
   </div>
 </div>
