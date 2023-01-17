@@ -19,7 +19,6 @@ public class Formation {
 
     private boolean isConfirmed;
     private int minParticipants;
-    private int nbParticipants;
     private boolean isPerso;
     private boolean isInterEntreprise;
     private String link;

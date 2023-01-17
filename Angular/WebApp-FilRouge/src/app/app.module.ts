@@ -17,7 +17,6 @@ import { LinksComponent } from './footer/links/links.component';
 import { ListFormaComponent } from './corpus/list-forma/list-forma.component';
 import { SearchFormaComponent } from './corpus/search-forma/search-forma.component';
 import { CreateFormaComponent } from './corpus/create-forma/create-forma.component';
-import { UserProfileComponent } from './corpus/user-profile/user-profile.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
@@ -46,7 +45,6 @@ import { CardsParamComponent } from './corpus/cards/cards-param/cards-param.comp
     ListFormaComponent,
     SearchFormaComponent,
     CreateFormaComponent,
-    UserProfileComponent,
     HomeComponent,
     RegisterFormComponent,
     PoliciesComponent,
