@@ -1,2 +1,4 @@
-export interface SsTheme {
+export interface ISsTheme {
+  id: string;
+  name: string;
 }

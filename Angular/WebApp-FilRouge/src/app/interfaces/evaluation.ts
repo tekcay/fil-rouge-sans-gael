@@ -1,2 +1,5 @@
-export interface Evaluation {
+export interface IEvaluation {
+  id:string;
+  title:string;
+  grade:number;
 }
