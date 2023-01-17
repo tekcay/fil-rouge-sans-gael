@@ -10,7 +10,7 @@ import java.util.List;
 public class Stagiaire {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_stagiaire")
     private int id;
 
@@ -26,6 +26,9 @@ public class Stagiaire {
             inverseJoinColumns = @JoinColumn(name="id_formation"))
     private List<Formation> formationList;
 
+    /**
+     * WARNING: column name in DB is {@code is_pro} !
+     */
     private boolean isPro;
 
     @ManyToOne(targetEntity = Entreprise.class)
