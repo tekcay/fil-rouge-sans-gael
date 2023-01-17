@@ -19,6 +19,8 @@ public class Formateur {
     private String mail;
     private int experience;
 
+    private int note;
+
     @OneToMany(mappedBy = "formateur")
     private List<EvaluationForm> evaluationFormList;
 
