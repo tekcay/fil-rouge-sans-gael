@@ -16,6 +16,7 @@ import { CardsCreateComponent } from './corpus/cards/cards-create/cards-create.c
 import { CardsListComponent } from './corpus/cards/cards-list/cards-list.component';
 import { CardsParamComponent } from './corpus/cards/cards-param/cards-param.component';
 import { CardsSearchComponent } from './corpus/cards/cards-search/cards-search.component';
+import { CardsTabBordComponent } from './corpus/cards/cards-tab-bord/cards-tab-bord.component';
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -25,7 +26,8 @@ const routes: Routes = [
       { path: 'cards-search', component: CardsSearchComponent },
       { path: 'cards-create', component: CardsCreateComponent },
       { path: 'cards-achievement', component: CardsAchievementComponent },
-      { path: 'cards-param', component: CardsParamComponent }
+      { path: 'cards-param', component: CardsParamComponent },
+      { path: 'cards-tab-bord', component:CardsTabBordComponent}
     ]},
     { path: 'create', component: CreateFormaComponent },
     { path: 'liste', component: ListFormaComponent },

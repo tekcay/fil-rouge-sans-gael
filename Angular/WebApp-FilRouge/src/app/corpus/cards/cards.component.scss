@@ -85,6 +85,24 @@
   background-size: auto;
 }
 
+.tabBord{
+  height: 100%;
+  padding: 10px;
+  background-color: #120C32;
+  border: 2px solid #120C32;
+  flex: 1;
+  transition: .2s;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 32px;
+  margin-right: 2px;
+  margin-left: 2px;
+  background-image: url("../../media/tabBord.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
 .param{
   height: 100%;
   padding: 10px;

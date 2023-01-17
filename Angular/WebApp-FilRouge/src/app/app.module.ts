@@ -29,6 +29,7 @@ import { CardsCreateComponent } from './corpus/cards/cards-create/cards-create.c
 import { CardsAchievementComponent } from './corpus/cards/cards-achievement/cards-achievement.component';
 import { CardsSearchComponent } from './corpus/cards/cards-search/cards-search.component';
 import { CardsParamComponent } from './corpus/cards/cards-param/cards-param.component';
+import { CardsTabBordComponent } from './corpus/cards/cards-tab-bord/cards-tab-bord.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { CardsParamComponent } from './corpus/cards/cards-param/cards-param.comp
     CardsCreateComponent,
     CardsAchievementComponent,
     CardsSearchComponent,
-    CardsParamComponent
+    CardsParamComponent,
+    CardsTabBordComponent
   ],
   imports: [
     BrowserModule,
