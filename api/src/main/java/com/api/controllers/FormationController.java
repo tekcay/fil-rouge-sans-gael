@@ -76,15 +76,15 @@ public class FormationController implements MappingHelper<FormationDTO, Formatio
         Integer themeId = formationDTO.getThemeId();
         Theme theme = themeRepo.findById(themeId).orElseThrow(() -> new RuntimeException("No such Theme with id " + themeId));
 
+        System.out.println("Print FormationDTO : " + formationDTO);
 
-        List<Integer> sThemesId = formationDTO.getSThemesId();
+        List<Integer> sThemesId = formationDTO.getSousThemesId();
         ListFieldRetrieverHelper<STheme,SThemeRepo> sThemeRetrieverHelper = new ListFieldRetrieverHelper<>();
         List<STheme> sThemesList = sThemeRetrieverHelper.getListFromId(sThemesId, sThemeRepo, STheme.class);
 
         List<Integer> ssThemesId = formationDTO.getSsThemesId();
         ListFieldRetrieverHelper<SsTheme,SsThemeRepo> ssThemeRetrieverHelper = new ListFieldRetrieverHelper<>();
         List<SsTheme> ssThemesList = ssThemeRetrieverHelper.getListFromId(ssThemesId, ssThemeRepo, SsTheme.class);
-
 
         Formation formation = reverseMapToDTO(formationDTO, Formation.class);
         formation.setTheme(theme);

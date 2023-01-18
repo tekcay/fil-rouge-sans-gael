@@ -23,13 +23,13 @@ public class FormationDTO {
     private double prix;
     private Integer themeId;
 
-    private List<Integer> sThemesId;
+    private List<Integer> sousThemesId;
     private List<Integer> ssThemesId;
 
-    public FormationDTO(String name, Integer themeId, List<Integer> ssThemesId, List<Integer> sThemesId) {
+    public FormationDTO(String name, Integer themeId, List<Integer> sousThemesId, List<Integer> ssThemesId) {
         this.name = name;
         this.themeId = themeId;
-        this.sThemesId = sThemesId;
+        this.sousThemesId = sousThemesId;
         this.ssThemesId = ssThemesId;
 
     }
