@@ -54,55 +54,34 @@ public class FormationController {
 
      */
 
+    private List<FormationDTO> mapToFormationDTO(List<Formation> formationList) {
+        ModelMapper modelMapper = new ModelMapper();
+        modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
+
+        return formationList
+                .stream()
+                .map(formation -> modelMapper.map(formation, FormationDTO.class))
+                .toList();
+    }
+
 
     @GetMapping("/formations/byThemeId/{id}")
     public ResponseEntity<List<FormationDTO>> getFormationByThemeId(@PathVariable int id) {
         List<Formation> formationList = formationRepo.findByThemeId(id).orElseThrow(() -> new RuntimeException("No such Formation with theme id " + id));
-        ModelMapper modelMapper = new ModelMapper();
-        modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
-
-        List<FormationDTO> formationDTOList = formationList
-                .stream()
-                .map(formation -> modelMapper.map(formation, FormationDTO.class))
-                .toList();
-
-        return ResponseEntity.ok(formationDTOList);
+        return ResponseEntity.ok(mapToFormationDTO(formationList));
     }
 
-
-    /*
-    @GetMapping("/formations/byThemeId/{id}")
-    public List<FormationDTO> getFormationByThemeId(@PathVariable int id) {
-        List<Formation> formationList = formationRepo.findByThemeId(id);
-        ModelMapper modelMapper = new ModelMapper();
-        modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
-
-        List<FormationDTO> formationDTOList = formationList
-                .stream()
-                .map(formation -> modelMapper.map(formation, FormationDTO.class))
-                .toList();
-
-        return formationDTOList;
-    }
-
-     */
-
-
-
-    /*
     @GetMapping("/formations/bySThemeId/{id}")
-    public ResponseEntity<List<Formation>> getFormationBySThemeId(@PathVariable int id) {
-        List<Formation> formationList = formationRepo.findBySThemeId(id).orElseThrow(() -> new RuntimeException("No such Formation with STheme id " + id));
-        return ResponseEntity.ok(formationList);
+    public ResponseEntity<List<FormationDTO>> getFormationBySThemeId(@PathVariable int id) {
+        List<Formation> formationList = formationRepo.findBySThemeId(id).orElseThrow(() -> new RuntimeException("No such Formation with stheme id " + id));
+        return ResponseEntity.ok(mapToFormationDTO(formationList));
     }
 
     @GetMapping("/formations/bySsThemeId/{id}")
-    public ResponseEntity<List<Formation>> getFormationBySsThemeId(@PathVariable int id) {
-        List<Formation> formationList = formationRepo.findBySsThemeId(id).orElseThrow(() -> new RuntimeException("No such Formation with SsTheme id " + id));
-        return ResponseEntity.ok(formationList);
+    public ResponseEntity<List<FormationDTO>> getFormationBySsThemeId(@PathVariable int id) {
+        List<Formation> formationList = formationRepo.findBySsThemeId(id).orElseThrow(() -> new RuntimeException("No such Formation with sstheme id " + id));
+        return ResponseEntity.ok(mapToFormationDTO(formationList));
     }
-
-     */
 
     @PostMapping("create-formation")
     public FormationDTO createFormation(@RequestBody FormationDTO formationDTO) {

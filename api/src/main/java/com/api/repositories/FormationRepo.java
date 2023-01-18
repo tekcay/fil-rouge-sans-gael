@@ -12,6 +12,8 @@ public interface FormationRepo extends JpaRepository<Formation, Integer> {
     Optional<Formation> findById(int id);
     Optional<Formation> findByName(String name);
     Optional<List<Formation>> findByThemeId(int id);
+    Optional<List<Formation>> findBySThemeId(int id);
+    Optional<List<Formation>> findBySsThemeId(int id);
 
 
     /*
