@@ -17,6 +17,7 @@ import { CardsListComponent } from './corpus/cards/cards-list/cards-list.compone
 import { CardsParamComponent } from './corpus/cards/cards-param/cards-param.component';
 import { CardsSearchComponent } from './corpus/cards/cards-search/cards-search.component';
 import { CardsTabBordComponent } from './corpus/cards/cards-tab-bord/cards-tab-bord.component';
+import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -35,7 +36,8 @@ const routes: Routes = [
     { path: 'register', component: RegisterFormComponent },
     { path: 'policies', component: PoliciesComponent },
     { path: 'stats', component: StatsComponent },
-    { path: 'prospect', component: PropsectionComponent }
+    { path: 'prospect', component: PropsectionComponent },
+    { path: 'contact', component: ContactComponent },
 ];
 
 @NgModule({
