@@ -36,21 +36,17 @@ public class FormationController implements MappingHelper<FormationDTO, Formatio
         return mapListToDTO(formationRepo.findAll(), FormationDTO.class);
     }
 
-    @GetMapping("/formations/{id}")
+    @GetMapping("/formations-getById/{id}")
     public ResponseEntity<FormationDTO> getFormationById(@PathVariable int id) {
         Formation formation = formationRepo.findById(id).orElseThrow(() -> new RuntimeException("No such Formation with id " + id));
         return ResponseEntity.ok(mapToDTO(formation, FormationDTO.class));
     }
 
-    /*
-    @GetMapping("/formations/{name}")
-    public ResponseEntity<Formation> getFormationByName(@PathVariable String name) {
+    @GetMapping("/formations-getByName/{name}")
+    public ResponseEntity<FormationDTO> getFormationByName(@PathVariable String name) {
         Formation formation = formationRepo.findByName(name).orElseThrow(() -> new RuntimeException("No such Formation with name " + name));
-        return ResponseEntity.ok(formation);
+        return ResponseEntity.ok(mapToDTO(formation, FormationDTO.class));
     }
-
-     */
-
 
     @GetMapping("/formations/byThemeId/{id}")
     public ResponseEntity<List<FormationDTO>> getFormationByThemeId(@PathVariable int id) {
