@@ -4,10 +4,24 @@
   </div>
   <div class="content">
     Pour créer une formation remplissez le formulaire suivant:
-    <input type="number" placeholder="ID" name="id"/>
-    <input type="number" placeholder="minPart" name="minPart"/>
-    <input type="number" placeholder="nbPart" name="nbPart"/>
-    <input type="number" placeholder="price" name="price"/>
-    <button>Submit</button>
+      <input type="text" placeholder="Nom" name="lastname"/>
+      <input type="text" placeholder="Prenom" name="firstname"/>
+      <input type="email" placeholder="Email" name="email"/>
+      <input type="text" placeholder="Titre de la formation" name="title"/>
+      <input type="text" placeholder="Description de la formation" name="desc"/>
+      <input type="text" placeholder="Titre de la formation" name="title"/>
+      <div>
+        <input type="checkbox" id="type" name="intra">
+        <label for="scales">Intra-entreprise</label>
+      </div>
+      <div>
+        <input type="checkbox" id="type" name="inter">
+        <label for="horns">Inter-entreprise</label>
+      </div>
+      <div id="date-of-forma">
+        <label for="date-of-forma">Date de la formation</label><br>
+        <input type="date" id="date-of-forma" name="date-of-forma" placeholder="date de formation">
+      </div>
+      <button>Envoyer le formulaire</button>
   </div>
 </div>
