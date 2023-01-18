@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { catchError, Observable, throwError } from 'rxjs';
 import { Theme } from '../../classes/theme';
 
 @Injectable({
@@ -17,12 +17,12 @@ export class ThemeService {
 
  private handleError = (error: Response) => {
     if (error.status === 400) {
-      return new Error("Bad input error");
+      return throwError("Bad input error");
     }
     if (error.status === 404) {
-      return new Error("Not found error"));
+      return throwError("Not found error");
     }
 
-    return new Error("App error");
+    return throwError("App error");
   }
 }
