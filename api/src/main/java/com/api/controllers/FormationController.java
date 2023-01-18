@@ -36,43 +36,43 @@ public class FormationController implements MappingHelper<FormationDTO, Formatio
         return mapListToDTO(formationRepo.findAll(), FormationDTO.class);
     }
 
-    @GetMapping("/formations-getById/{id}")
+    @GetMapping("/getById/{id}")
     public ResponseEntity<FormationDTO> getFormationById(@PathVariable int id) {
         Formation formation = formationRepo.findById(id).orElseThrow(() -> new RuntimeException("No such Formation with id " + id));
         return ResponseEntity.ok(mapToDTO(formation, FormationDTO.class));
     }
 
-    @GetMapping("/formations-getByName/{name}")
+    @GetMapping("/getByName/{name}")
     public ResponseEntity<FormationDTO> getFormationByName(@PathVariable String name) {
         Formation formation = formationRepo.findByName(name).orElseThrow(() -> new RuntimeException("No such Formation with name " + name));
         return ResponseEntity.ok(mapToDTO(formation, FormationDTO.class));
     }
 
-    @GetMapping("/formations/byThemeId/{id}")
+    @GetMapping("/getByThemeId/{id}")
     public ResponseEntity<List<FormationDTO>> getFormationByThemeId(@PathVariable int id) {
         List<Formation> formationList = formationRepo.findByThemeId(id).orElseThrow(() -> new RuntimeException("No such Formation with theme id " + id));
         return ResponseEntity.ok(mapListToDTO(formationList, FormationDTO.class));
     }
 
-    @GetMapping("/formations/bySThemeId/{id}")
+    @GetMapping("/getBySThemeId/{id}")
     public ResponseEntity<List<FormationDTO>> getFormationBySThemeId(@PathVariable int id) {
         List<Formation> formationList = formationRepo.findBysThemesId(id).orElseThrow(() -> new RuntimeException("No such Formation with stheme id " + id));
         return ResponseEntity.ok(mapListToDTO(formationList, FormationDTO.class));
     }
 
-    @GetMapping("/formations/bySsThemeId/{id}")
+    @GetMapping("/getBySsThemeId/{id}")
     public ResponseEntity<List<FormationDTO>> getFormationBySsThemeId(@PathVariable int id) {
         List<Formation> formationList = formationRepo.findByssThemesId(id).orElseThrow(() -> new RuntimeException("No such Formation with sstheme id " + id));
         return ResponseEntity.ok(mapListToDTO(formationList, FormationDTO.class));
     }
 
-    @PostMapping("create-formation")
+    @PostMapping("/createFormation")
     public FormationDTO createFormation(@RequestBody FormationDTO formationDTO) {
 
         Integer themeId = formationDTO.getThemeId();
         Theme theme = themeRepo.findById(themeId).orElseThrow(() -> new RuntimeException("No such Theme with id " + themeId));
 
-        System.out.println("Print FormationDTO : " + formationDTO);
+        //TODO to factorize
 
         List<Integer> sThemesId = formationDTO.getSousThemesId();
         ListFieldRetrieverHelper<STheme,SThemeRepo> sThemeRetrieverHelper = new ListFieldRetrieverHelper<>();
@@ -89,6 +89,12 @@ public class FormationController implements MappingHelper<FormationDTO, Formatio
         Formation formationSaved = formationRepo.save(formation);
 
         return mapToDTO(formationSaved, FormationDTO.class);
+    }
+
+    @PostMapping("/removeById")
+    public boolean removeFormationById(@RequestBody int id) {
+        formationRepo.deleteById(id);
+        return true;
     }
 
 
