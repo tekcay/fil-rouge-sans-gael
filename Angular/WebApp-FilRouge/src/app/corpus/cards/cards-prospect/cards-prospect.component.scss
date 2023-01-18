@@ -2,11 +2,10 @@
   display: flexbox;
   color: white;
   justify-items: center;
-  font-weight: 200;
+  overflow: auto;
 }
 
 .title{
-  margin-top: 10px;
   background-color: #120C32;
   border: 2px solid #FF9950;
   flex: 1;
@@ -17,12 +16,12 @@
   border-radius: 32px;
   margin-left: 10px;
   margin-right: 10px;
+  height: 10vh;
   font-size:xx-large;
-
+  font-weight: 200;
 }
 
 .content{
-  margin-top: 10px;
   height: 58vh;
   margin-top: 10px;
   background-color: #120C32;
@@ -36,41 +35,4 @@
   border-radius: 32px;
   margin-left: 10px;
   margin-right: 10px;
-}
-
-input{
-  margin-top: 10px;
-  width: 80%
-}
-
-.descInput{
-  height: 50%;
-}
-
-.checkboxInput{
-  font-size: large;
-  font-weight: bolder;
-  margin-top: 0px;
-  width: auto
-}
-
-.date-of-forma{
-  width: 80%;
-  background-color: red;
-}
-
-button{
-  margin-top: 10px;
-  background-color: #120C32;
-  border: 2px solid #FF9950;
-  color: #FF9950;
-  flex: 1;
-  transition: .2s;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  border-radius: 32px;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 10px;
 }

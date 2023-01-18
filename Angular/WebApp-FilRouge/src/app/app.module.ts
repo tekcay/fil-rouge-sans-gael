@@ -31,6 +31,7 @@ import { CardsSearchComponent } from './corpus/cards/cards-search/cards-search.c
 import { CardsParamComponent } from './corpus/cards/cards-param/cards-param.component';
 import { CardsTabBordComponent } from './corpus/cards/cards-tab-bord/cards-tab-bord.component';
 import { ContactComponent } from './contact/contact.component';
+import { CardsProspectComponent } from './corpus/cards/cards-prospect/cards-prospect.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { ContactComponent } from './contact/contact.component';
     CardsSearchComponent,
     CardsParamComponent,
     CardsTabBordComponent,
-    ContactComponent
+    ContactComponent,
+    CardsProspectComponent
   ],
   imports: [
     BrowserModule,

@@ -22,7 +22,7 @@
 
 .content{
   margin-top: 10px;
-  height: 58vh;
+  height: 70vh;
   margin-top: 10px;
   background-color: #120C32;
   border: 2px solid #FF9950;
@@ -36,4 +36,33 @@
   margin-left: 10px;
   margin-right: 10px;
   overflow: auto;
+}
+
+form{
+  width: 98%;
+  margin-left: 20px;
+}
+
+.checkboxType{
+  width: 10px;
+}
+
+h6{
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+button{
+  margin-top: 10px;
+  background-color: #120C32;
+  border: 2px solid #FF9950;
+  color: #FF9950;
+  flex: 1;
+  transition: .2s;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 32px;
+  margin-left: 10px;
+  margin-right: 10px;
 }

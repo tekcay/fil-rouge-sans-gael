@@ -3,25 +3,21 @@
     Créer une formation
   </div>
   <div class="content">
-    Pour créer une formation remplissez le formulaire suivant:
       <input type="text" placeholder="Nom" name="lastname"/>
       <input type="text" placeholder="Prenom" name="firstname"/>
       <input type="email" placeholder="Email" name="email"/>
       <input type="text" placeholder="Titre de la formation" name="title"/>
-      <input type="text" placeholder="Description de la formation" name="desc"/>
+      <input class="descInput" type="textarea" placeholder="Description de la formation" name="desc"/>
       <input type="text" placeholder="Titre de la formation" name="title"/>
-      <div>
-        <input type="checkbox" id="type" name="intra">
-        <label for="scales">Intra-entreprise</label>
+      <div class="checkboxInput">
+        Intra-entreprise <input class="checkboxInput"  type="checkbox" id="type" name="intra">
       </div>
-      <div>
-        <input type="checkbox" id="type" name="inter">
-        <label for="horns">Inter-entreprise</label>
+      <div class="checkboxInput">
+        Inter-entreprise <input class="checkboxInput" type="checkbox" id="type" name="inter">
       </div>
       <div id="date-of-forma">
-        <label for="date-of-forma">Date de la formation</label><br>
-        <input type="date" id="date-of-forma" name="date-of-forma" placeholder="date de formation">
+        <span style="font-weight: bolder; margin-bottom: 10px; margin-top: 20px;">Date de la formation</span> <input type="date" id="date-of-forma" name="date-of-forma" placeholder="date de formation">
       </div>
-      <button>Envoyer le formulaire</button>
+      <button class="send" style="margin-top: 20px;">Envoyer le formulaire</button>
   </div>
 </div>

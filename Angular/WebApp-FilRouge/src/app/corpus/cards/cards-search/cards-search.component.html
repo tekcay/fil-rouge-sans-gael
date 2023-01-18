@@ -3,30 +3,29 @@
     Recherche de formation
   </div>
   <div class="content">
-    Remplissez les données suivantes
     <form>
-      <div id="title-of-form">
-        <input type="text" id="title-of-form" name="title-of-form" placeholder="Titre">
+      <div id="title-of-form" style="margin-bottom: 20px">
+        <input style="width: 80%;" type="text" id="title-of-form" name="title-of-form" placeholder="Titre">
       </div>
       <div id="category-of-form">
         <h6>Thème</h6>
         <div class="theme" *ngFor="let theme of themes">
-          <p>{{theme.name}}<input type="checkbox" value="{{theme.name}}"><p>
+          <p>{{theme.name}} <input type="checkbox" value="{{theme.name}}"><p>
           </div>
       </div><br>
       <div id="scategory-of-form">
         <h6>Sous thème</h6>
         <div class="stheme" *ngFor="let stheme of sthemes">
-          <p>{{stheme.name}<input type="checkbox" value="{{stheme.name}}">}<p>
+          <p>{{stheme.name}} <input type="checkbox" value="{{stheme.name}}"><p>
           </div>
       </div><br>
       <div id="sscategory-of-form">
         <h6>Sous-sous thème</h6>
         <div class="sstheme" *ngFor="let sstheme of ssthemes">
-          <p>{{sstheme.name}}<input type="checkbox" value="{{sstheme.name}}"></p>
+          <p>{{sstheme.name}} <input type="checkbox" value="{{sstheme.name}}"></p>
         </div>
       </div>
-      <button>Submit</button>
+      <button style="margin-top: 10px; width: 20%; height: 7%;">Submit</button>
 
     </form>
   </div>

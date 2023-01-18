@@ -7,6 +7,7 @@
   height: 75vh;
   display: flex;
   color: white;
+  margin-bottom: 20px;
 }
 
 .resultOfCard{
@@ -121,6 +122,24 @@
   background-size: auto;
 }
 
+.prospect{
+  height: 100%;
+  padding: 10px;
+  background-color: #120C32;
+  border: 4px solid #FF9950;
+  flex: 1;
+  transition: .2s;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 32px;
+  margin-right: 2px;
+  margin-left: 2px;
+  background-image: url("../../media/prospect.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
 .liste:hover{
   flex: 3;
   background-color: #FF9950;
@@ -138,6 +157,11 @@
   background-color: #FF9950;
 }
 .param:hover{
+  flex: 3;
+  background-color: #FF9950;
+}
+
+.prospect:hover{
   flex: 3;
   background-color: #FF9950;
 }

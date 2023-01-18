@@ -8,8 +8,8 @@ import { IFormation } from 'src/app/interfaces/formation';
 })
 export class ListFormaComponent {
   formations : IFormation[]=[
-    {id:'0',name:"formation avec toto",description:"cette formation ne sera pas la plus quali mais elle est drole",theme:undefined!,stheme:undefined!,sstheme:undefined!,seances:undefined!,formateurs:undefined!,isConfirmed:true,isIntra:true,isPerso:false,minPart:10,nbPart:5,link:"toto.fr",price:500},
-    {id:'1',name:"formation avec tata",description:"cette formation est à chier",theme:undefined!,stheme:undefined!,sstheme:undefined!,seances:undefined!,formateurs:undefined!,isConfirmed:true,isIntra:true,isPerso:false,minPart:10,nbPart:6,link:"tata.fr",price:400}
+    {id:'0',name:"Formation JEE",description:"Ut minus asperiores ut dolores corporis a facilis quia ea autem iusto ea voluptatem temporibus et consequatur magni ut praesentium facere. 33 laborum perferendis non mollitia quas et placeat veniam. Aut saepe quam et consequatur omnis in atque autem ut nostrum nesciunt. Aut quasi temporibus sit nihil mollitia vel obcaecati mollitia sit doloribus minus rem similique recusandae.",theme:undefined!,stheme:undefined!,sstheme:undefined!,seances:undefined!,formateurs:undefined!,isConfirmed:true,isIntra:true,isPerso:false,minPart:10,nbPart:5,link:"toto.fr",price:500},
+    {id:'1',name:"Formation JPA/Spring",description:"Ut minus asperiores ut dolores corporis a facilis quia ea autem iusto ea voluptatem temporibus et consequatur magni ut praesentium facere. 33 laborum perferendis non mollitia quas et placeat veniam. Aut saepe quam et consequatur omnis in atque autem ut nostrum nesciunt. Aut quasi temporibus sit nihil mollitia vel obcaecati mollitia sit doloribus minus rem similique recusandae.",theme:undefined!,stheme:undefined!,sstheme:undefined!,seances:undefined!,formateurs:undefined!,isConfirmed:true,isIntra:true,isPerso:false,minPart:10,nbPart:6,link:"tata.fr",price:400}
   ]
 
 }
