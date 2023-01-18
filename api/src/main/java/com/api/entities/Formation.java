@@ -17,6 +17,7 @@ public class Formation {
     @OneToOne(targetEntity = Formateur.class, mappedBy = "formation")
     private Formateur formateur;
 
+    private String name;
     private boolean isConfirmed;
     private int minParticipants;
     private boolean isPerso;

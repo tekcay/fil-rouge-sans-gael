@@ -29,7 +29,7 @@ public class STheme {
     @JoinTable(name= "sTheme_formation",
             joinColumns = @JoinColumn(name="id_sTheme"),
             inverseJoinColumns = @JoinColumn(name="id_formation"))
-    private List<SsTheme> formations;
+    private List<Formation> formations;
 
     private String name;
 
