@@ -1,11 +1,11 @@
 .corps-create-forma{
-  display: flex;
-  flex-direction: column;
+  display: flexbox;
   color: white;
   justify-items: center;
 }
 
 .title{
+  height: 10vh;
   background-color: #120C32;
   border: 2px solid #FF9950;
   flex: 1;
@@ -16,9 +16,13 @@
   border-radius: 32px;
   margin-left: 10px;
   margin-right: 10px;
+  font-size:xx-large;
+  font-weight: 200;
 }
 
 .content{
+  height: 58vh;
+  margin-top: 10px;
   background-color: #120C32;
   border: 2px solid #FF9950;
   flex: 1;
