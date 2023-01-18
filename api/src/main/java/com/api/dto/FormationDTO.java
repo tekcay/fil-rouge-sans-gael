@@ -12,10 +12,11 @@ import java.util.List;
 @AllArgsConstructor
 public class FormationDTO {
 
+    private Integer id;
     private Integer formateurId;
     private String name;
     private boolean isConfirmed;
-    private int minParticipants;
+    private Integer minParticipants;
     private boolean isPerso;
     private boolean isInterEntreprise;
     private String link;
