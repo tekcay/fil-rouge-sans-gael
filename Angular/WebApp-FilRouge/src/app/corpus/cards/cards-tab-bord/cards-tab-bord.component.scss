@@ -1,6 +1,5 @@
 .listOfForm{
-  display: flex;
-  flex-direction: column;
+  display: flexbox;
   color: white;
   justify-items: center;
 }
@@ -16,9 +15,15 @@
   border-radius: 32px;
   margin-left: 10px;
   margin-right: 10px;
+  margin-top: 10px;
+  font-size:xx-large;
+  font-weight: 200;
+
 }
 
 .content{
+  margin-top: 10px;
+  height: 58vh;
   background-color: #120C32;
   border: 2px solid #FF9950;
   flex: 1;

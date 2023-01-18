@@ -17,7 +17,7 @@ ul{
   border-radius: 32px;
   gap: 16px;
   box-shadow: #FF995030 0px 8px 24px;
-  border: 2px solid #FF9950;
+  border: 4px solid #FF9950;
 }
 
 li{
@@ -32,4 +32,15 @@ li{
 li:hover::after{
   transform: scaleX(1);
   transform-origin: bottom center;
+}
+
+.title{
+  flex: 1;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size:xx-large;
+  font-weight: 200;
 }
