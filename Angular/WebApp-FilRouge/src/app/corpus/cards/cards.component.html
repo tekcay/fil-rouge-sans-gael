@@ -1,10 +1,12 @@
 <div class="box">
   <div class="cards-list">
     <div class="liste" routerLink="cards-list"> <span class="tag">Liste des formations</span> </div>
-    <div class="recherche" routerLink="cards-search"> <span class="tag">Rechercher une formation</span></div>
+    <div *ngIf="role!='admin'" class="recherche" routerLink="cards-search"> <span class="tag">Rechercher une formation</span></div>
     <div class="cree" routerLink="cards-create"> <span class="tag">Créer une formation</span></div>
-    <div class="avance" routerLink="cards-achievement"><span class="tag">Avancée</span></div>
-    <div class="param" routerLink="cards-param"><span class="tag">Paramètres</span></div>
+    <div *ngIf="role!='admin'" class="avance" routerLink="cards-achievement"><span class="tag">Avancée</span></div>
+    <div *ngIf="role=='admin'" class="tabBord" routerLink="cards-tab-bord"><span class="tag">Tableau de bord</span></div>
+    <div *ngIf="role=='admin'" class="prospect" routerLink="cards-prospect"><span class="tag">Prospection</span></div>
+    <!-- <div class="param" routerLink="cards-param"><span class="tag">Paramètres</span></div> -->
   </div>
   <div class="resultOfCard">
     <router-outlet></router-outlet>

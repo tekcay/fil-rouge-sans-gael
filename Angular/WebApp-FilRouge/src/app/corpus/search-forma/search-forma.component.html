@@ -6,16 +6,27 @@
     Remplissez les données suivantes
     <form>
       <div id="title-of-form">
-        <label for="title-of-form">Titre</label>
-        <input type="text" id="title-of-form" name="title-of-form">
+        <input type="text" id="title-of-form" name="title-of-form" placeholder="Titre">
       </div>
       <div id="category-of-form">
-        <label for="category-of-form">Catégorie</label>
-        <input type="radio" name="category-of-form" value="Red">Red<br>
-        <input type="radio" name="category-of-form" value="Blue">Blue<br>
-        <input type="radio" name="category-of-form" value="Yellow">Yellow
+        <h6>Thème</h6>
+        <div class="theme" *ngFor="let theme of themes">
+          <p>{{theme.name}}<input type="checkbox" value="{{theme.name}}"><p>
+          </div>
+      </div><br>
+      <div id="scategory-of-form">
+        <h6>Sous thème</h6>
+        <div class="stheme" *ngFor="let stheme of sthemes">
+          <p>{{stheme.name}<input type="checkbox" value="{{stheme.name}}">}<p>
+          </div>
+      </div><br>
+      <div id="sscategory-of-form">
+        <h6>Sous-sous thème</h6>
+        <div class="sstheme" *ngFor="let sstheme of ssthemes">
+          <p>{{sstheme.name}}<input type="checkbox" value="{{sstheme.name}}"></p>
+        </div>
       </div>
+      <button>Submit</button>
 
     </form>
   </div>
-</div>

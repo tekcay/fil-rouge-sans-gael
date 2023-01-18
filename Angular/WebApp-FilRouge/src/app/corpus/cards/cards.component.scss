@@ -7,6 +7,7 @@
   height: 75vh;
   display: flex;
   color: white;
+  margin-bottom: 20px;
 }
 
 .resultOfCard{
@@ -17,7 +18,7 @@
   height: 100%;
   padding: 10px;
   background-color: #120C32;
-  border: 2px solid #120C32;
+  border: 4px solid #FF9950;
   flex: 1;
   transition: .2s;
   align-items: center;
@@ -35,7 +36,7 @@
   height: 100%;
   padding: 10px;
   background-color: #120C32;
-  border: 2px solid #120C32;
+  border: 4px solid #FF9950;
   flex: 1;
   transition: .2s;
   align-items: center;
@@ -53,7 +54,7 @@
   height: 100%;
   padding: 10px;
   background-color: #120C32;
-  border: 2px solid #120C32;
+  border: 4px solid #FF9950;
   flex: 1;
   transition: .2s;
   align-items: center;
@@ -71,7 +72,7 @@
   height: 100%;
   padding: 10px;
   background-color: #120C32;
-  border: 2px solid #120C32;
+  border: 4px solid #FF9950;
   flex: 1;
   transition: .2s;
   align-items: center;
@@ -85,11 +86,29 @@
   background-size: auto;
 }
 
+.tabBord{
+  height: 100%;
+  padding: 10px;
+  background-color: #120C32;
+  border: 4px solid #FF9950;
+  flex: 1;
+  transition: .2s;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 32px;
+  margin-right: 2px;
+  margin-left: 2px;
+  background-image: url("../../media/tabBord.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
 .param{
   height: 100%;
   padding: 10px;
   background-color: #120C32;
-  border: 2px solid #120C32;
+  border: 4px solid #FF9950;
   flex: 1;
   transition: .2s;
   align-items: center;
@@ -99,6 +118,24 @@
   margin-right: 2px;
   margin-left: 2px;
   background-image: url("../../media/paramètres.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.prospect{
+  height: 100%;
+  padding: 10px;
+  background-color: #120C32;
+  border: 4px solid #FF9950;
+  flex: 1;
+  transition: .2s;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 32px;
+  margin-right: 2px;
+  margin-left: 2px;
+  background-image: url("../../media/prospect.jpg");
   background-repeat: no-repeat;
   background-size: auto;
 }
@@ -124,6 +161,16 @@
   background-color: #FF9950;
 }
 
+.prospect:hover{
+  flex: 3;
+  background-color: #FF9950;
+}
+
+.tabBord:hover{
+  flex: 3;
+  background-color: #FF9950;
+}
+
 .tag{
   height: 50px;
   background-color: #120C32;
@@ -136,5 +183,6 @@
   border-radius: 32px;
   margin-left: 10px;
   margin-right: 10px;
+  margin-top: 500px;
   bottom: 15%;
 }

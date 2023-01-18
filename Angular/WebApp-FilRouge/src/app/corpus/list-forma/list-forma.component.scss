@@ -1,33 +1,59 @@
 .corps-create-forma{
-  display: flex;
-  flex-direction: column;
+  display: flexbox;
   color: white;
   justify-items: center;
+  flex: 1;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-weight: 200;
+
 }
 
 .title{
   background-color: #120C32;
   border: 2px solid #FF9950;
-  flex: 1;
   transition: .2s;
   align-items: center;
   display: flex;
   justify-content: center;
   border-radius: 32px;
-  margin-left: 10px;
-  margin-right: 10px;
+  font-size:xx-large;
 }
 
 .content{
+  display: flexbox;
+}
+
+.formation{
+  left: 0;
+  margin-top: 10px;
   background-color: #120C32;
   border: 2px solid #FF9950;
-  flex: 1;
   transition: .2s;
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   border-radius: 32px;
-  margin-left: 10px;
-  margin-right: 10px;
+  padding-left: 10px;
+}
+
+h2{
+  width: 100%;
+  flex: 1;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size:xx-large;
+  position: relative;
+}
+
+p{
+  width: 100%;
+}
+
+.title-desc{
+  text-decoration: underline;
+  font-size: large;
+  font-weight: bolder;
 }

@@ -4,7 +4,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("./media/bgOrange.png");
+  background: linear-gradient(11deg, #120c32, #ff9950);
+  background-size: 400% 400%;
+  animation: anima 30s ease infinite;
+}
+
+@keyframes anima {
+  0%{background-position:63% 0%}
+  50%{background-position:38% 100%}
+  100%{background-position:63% 0%}
 }
 
 .header{

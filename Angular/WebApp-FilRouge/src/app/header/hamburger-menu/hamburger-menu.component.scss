@@ -107,18 +107,18 @@ body {
 .navbar .menu-items {
   padding-top: 60px;
   border-radius: 32px;
-  background-color: white;
+  background-color: #120C32;
   opacity: 0.9;
   height: 70vh;
   width: 15vw;
-  transform: translate(-200%);
+  transform: translate(-250%);
   display: flex;
   flex-direction: column;
-  margin-left: -40px;
+  margin-left: -75px;
   padding-left: 40px;
   transition: transform 0.5s ease-in-out;
   text-align: center;
-  border: #FF9950 solid 2px;
+  border: #FF9950 solid 4px;
 }
 
 .navbar .menu-items li {

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
+import { ButtonsComponent } from './header/hamburger-menu/buttons/buttons.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'WebApp-FilRouge';
+  @ViewChild(ButtonsComponent) buttonSelect: any;
+  role:string ="";
+  ngAfterViewInit() {
+    this.role = this.buttonSelect.role;
+    console.log(this.role)
+  }
+
 }

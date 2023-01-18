@@ -3,6 +3,13 @@
     Catalogue des formations
   </div>
   <div class="content">
-
+    <li class="formation" *ngFor="let formation of formations">
+      <h2>{{formation.name}}</h2>
+      <p><span class="title-desc">Description de la formation:</span> <br>{{formation.description}} </p>
+      <p><span class="title-desc">Thème de la formation:</span> <br>{{formation.theme}}<p>
+      <p><span class="title-desc">Prix:</span> <br>{{formation.price}}euro<p>
+      <p><span class="title-desc">Participants:</span> <br>{{formation.nbPart}}/{{formation.minPart}}</p>
+      <p><span class="title-desc">Lien d'inscription:</span> <br><a href="{{formation.link}}">Lien d'inscription</a></p>
+    </li>
   </div>
 </div>
