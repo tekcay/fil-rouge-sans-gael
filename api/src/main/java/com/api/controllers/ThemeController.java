@@ -1,6 +1,8 @@
 package com.api.controllers;
 
+import com.api.dto.ThemeDTO;
 import com.api.entities.Theme;
+import com.api.interfaces.MappingHelper;
 import com.api.repositories.ThemeRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -11,20 +13,20 @@ import java.util.List;
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/theme-controller")
-public class ThemeController {
+public class ThemeController implements MappingHelper<ThemeDTO, Theme> {
 
     @Autowired
     private ThemeRepo themeRepo;
 
     @GetMapping("/themes")
-    public List<Theme> getAllStagiaires() {
-        return themeRepo.findAll();
+    public List<ThemeDTO> getAllThemes() {
+        return mapListToDTO(themeRepo.findAll(), ThemeDTO.class);
     }
 
     @GetMapping("/themes/{id}")
-    public ResponseEntity<Theme> getThemeById(@PathVariable int id) {
+    public ResponseEntity<ThemeDTO> getThemeById(@PathVariable int id) {
         Theme theme = themeRepo.findById(id).orElseThrow(() -> new RuntimeException("No such Theme with id " + id));
-        return ResponseEntity.ok(theme);
+        return ResponseEntity.ok(mapToDTO(theme, ThemeDTO.class));
     }
 
     @PostMapping("create-theme")

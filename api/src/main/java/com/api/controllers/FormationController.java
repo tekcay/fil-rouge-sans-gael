@@ -3,23 +3,20 @@ package com.api.controllers;
 import com.api.dto.FormationDTO;
 import com.api.entities.Formation;
 import com.api.entities.Theme;
+import com.api.interfaces.MappingHelper;
 import com.api.repositories.FormateurRepo;
 import com.api.repositories.FormationRepo;
 import com.api.repositories.ThemeRepo;
-import org.modelmapper.ModelMapper;
-import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/formation-controller")
-public class FormationController {
+public class FormationController implements MappingHelper<FormationDTO, Formation> {
 
     @Autowired
     private FormationRepo formationRepo;
@@ -31,18 +28,14 @@ public class FormationController {
     private ThemeRepo themeRepo;
 
     @GetMapping("/formations")
-    public List<Formation> getAllFormation() {
-        return formationRepo.findAll();
+    public List<FormationDTO> getAllFormation() {
+        return mapListToDTO(formationRepo.findAll(), FormationDTO.class);
     }
 
     @GetMapping("/formations/{id}")
     public ResponseEntity<FormationDTO> getFormationById(@PathVariable int id) {
         Formation formation = formationRepo.findById(id).orElseThrow(() -> new RuntimeException("No such Formation with id " + id));
-        ModelMapper modelMapper = new ModelMapper();
-        modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
-        FormationDTO formationDTO = modelMapper.map(formation, FormationDTO.class);
-
-        return ResponseEntity.ok(formationDTO);
+        return ResponseEntity.ok(mapToDTO(formation, FormationDTO.class));
     }
 
     /*
@@ -54,48 +47,36 @@ public class FormationController {
 
      */
 
-    private List<FormationDTO> mapToFormationDTO(List<Formation> formationList) {
-        ModelMapper modelMapper = new ModelMapper();
-        modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
-
-        return formationList
-                .stream()
-                .map(formation -> modelMapper.map(formation, FormationDTO.class))
-                .toList();
-    }
-
 
     @GetMapping("/formations/byThemeId/{id}")
     public ResponseEntity<List<FormationDTO>> getFormationByThemeId(@PathVariable int id) {
         List<Formation> formationList = formationRepo.findByThemeId(id).orElseThrow(() -> new RuntimeException("No such Formation with theme id " + id));
-        return ResponseEntity.ok(mapToFormationDTO(formationList));
+        return ResponseEntity.ok(mapListToDTO(formationList, FormationDTO.class));
     }
 
     @GetMapping("/formations/bySThemeId/{id}")
     public ResponseEntity<List<FormationDTO>> getFormationBySThemeId(@PathVariable int id) {
-        List<Formation> formationList = formationRepo.findBySThemeId(id).orElseThrow(() -> new RuntimeException("No such Formation with stheme id " + id));
-        return ResponseEntity.ok(mapToFormationDTO(formationList));
+        List<Formation> formationList = formationRepo.findBysThemesId(id).orElseThrow(() -> new RuntimeException("No such Formation with stheme id " + id));
+        return ResponseEntity.ok(mapListToDTO(formationList, FormationDTO.class));
     }
 
     @GetMapping("/formations/bySsThemeId/{id}")
     public ResponseEntity<List<FormationDTO>> getFormationBySsThemeId(@PathVariable int id) {
-        List<Formation> formationList = formationRepo.findBySsThemeId(id).orElseThrow(() -> new RuntimeException("No such Formation with sstheme id " + id));
-        return ResponseEntity.ok(mapToFormationDTO(formationList));
+        List<Formation> formationList = formationRepo.findByssThemesId(id).orElseThrow(() -> new RuntimeException("No such Formation with sstheme id " + id));
+        return ResponseEntity.ok(mapListToDTO(formationList, FormationDTO.class));
     }
 
     @PostMapping("create-formation")
     public FormationDTO createFormation(@RequestBody FormationDTO formationDTO) {
-        ModelMapper modelMapper = new ModelMapper();
-        modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
 
         Integer themeId = formationDTO.getThemeId();
         Theme theme = themeRepo.findById(themeId).orElseThrow(() -> new RuntimeException("No such Theme with id " + themeId));
 
-        Formation formation = modelMapper.map(formationDTO, Formation.class);
+        Formation formation = reverseMapToDTO(formationDTO, Formation.class);
         formation.setTheme(theme);
         Formation formationSaved = formationRepo.save(formation);
 
-        return modelMapper.map(formationSaved, FormationDTO.class);
+        return mapToDTO(formationSaved, FormationDTO.class);
     }
 
 
