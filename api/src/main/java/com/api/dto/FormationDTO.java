@@ -26,9 +26,12 @@ public class FormationDTO {
     private List<Integer> sThemesId;
     private List<Integer> ssThemesId;
 
-    public FormationDTO(String name, Integer themeId) {
+    public FormationDTO(String name, Integer themeId, List<Integer> ssThemesId, List<Integer> sThemesId) {
         this.name = name;
         this.themeId = themeId;
+        this.sThemesId = sThemesId;
+        this.ssThemesId = ssThemesId;
+
     }
 
 

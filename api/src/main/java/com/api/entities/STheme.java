@@ -3,7 +3,9 @@ package com.api.entities;
 import lombok.Data;
 
 import jakarta.persistence.*;
+
 import java.util.List;
+import java.util.Set;
 
 @Data
 @Entity
@@ -13,7 +15,7 @@ public class STheme {
     @Id
     @GeneratedValue
     @Column(name = "id_sTheme")
-    private int id;
+    private Integer id;
 
     @ManyToOne(targetEntity = Theme.class)
     @JoinColumn(name = "id_theme")

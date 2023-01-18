@@ -2,11 +2,13 @@ package com.api.controllers;
 
 import com.api.dto.FormationDTO;
 import com.api.entities.Formation;
+import com.api.entities.STheme;
+import com.api.entities.SsTheme;
 import com.api.entities.Theme;
-import com.api.interfaces.MappingHelper;
-import com.api.repositories.FormateurRepo;
-import com.api.repositories.FormationRepo;
-import com.api.repositories.ThemeRepo;
+
+import com.api.helpers.ListFieldRetrieverHelper;
+import com.api.helpers.MappingHelper;
+import com.api.repositories.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -20,12 +22,14 @@ public class FormationController implements MappingHelper<FormationDTO, Formatio
 
     @Autowired
     private FormationRepo formationRepo;
-
     @Autowired
     private FormateurRepo formateurRepo;
-
     @Autowired
     private ThemeRepo themeRepo;
+    @Autowired
+    private SThemeRepo sThemeRepo;
+    @Autowired
+    private SsThemeRepo ssThemeRepo;
 
     @GetMapping("/formations")
     public List<FormationDTO> getAllFormation() {
@@ -72,8 +76,20 @@ public class FormationController implements MappingHelper<FormationDTO, Formatio
         Integer themeId = formationDTO.getThemeId();
         Theme theme = themeRepo.findById(themeId).orElseThrow(() -> new RuntimeException("No such Theme with id " + themeId));
 
+
+        List<Integer> sThemesId = formationDTO.getSThemesId();
+        ListFieldRetrieverHelper<STheme,SThemeRepo> sThemeRetrieverHelper = new ListFieldRetrieverHelper<>();
+        List<STheme> sThemesList = sThemeRetrieverHelper.getListFromId(sThemesId, sThemeRepo, STheme.class);
+
+        List<Integer> ssThemesId = formationDTO.getSsThemesId();
+        ListFieldRetrieverHelper<SsTheme,SsThemeRepo> ssThemeRetrieverHelper = new ListFieldRetrieverHelper<>();
+        List<SsTheme> ssThemesList = ssThemeRetrieverHelper.getListFromId(ssThemesId, ssThemeRepo, SsTheme.class);
+
+
         Formation formation = reverseMapToDTO(formationDTO, Formation.class);
         formation.setTheme(theme);
+        formation.setSThemes(sThemesList);
+        formation.setSsThemes(ssThemesList);
         Formation formationSaved = formationRepo.save(formation);
 
         return mapToDTO(formationSaved, FormationDTO.class);

@@ -2,7 +2,7 @@ package com.api.controllers;
 
 import com.api.dto.SsThemeDTO;
 import com.api.entities.SsTheme;
-import com.api.interfaces.MappingHelper;
+import com.api.helpers.MappingHelper;
 import com.api.repositories.SsThemeRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

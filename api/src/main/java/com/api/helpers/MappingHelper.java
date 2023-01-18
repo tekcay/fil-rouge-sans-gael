@@ -1,4 +1,4 @@
-package com.api.interfaces;
+package com.api.helpers;
 
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;

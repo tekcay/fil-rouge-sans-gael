@@ -2,7 +2,7 @@ package com.api.controllers;
 
 import com.api.dto.ThemeDTO;
 import com.api.entities.Theme;
-import com.api.interfaces.MappingHelper;
+import com.api.helpers.MappingHelper;
 import com.api.repositories.ThemeRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -29,7 +29,7 @@ public class ThemeController implements MappingHelper<ThemeDTO, Theme> {
         return ResponseEntity.ok(mapToDTO(theme, ThemeDTO.class));
     }
 
-    @PostMapping("create-theme")
+    @PostMapping("/create-theme")
     public Theme createTheme(@RequestBody Theme theme) {
         return themeRepo.save(theme);
     }
