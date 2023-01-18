@@ -22,8 +22,14 @@ public class FormationController {
     }
 
     @GetMapping("/formations/{id}")
-    public ResponseEntity<Formation> getStagiaireById(@PathVariable int id) {
+    public ResponseEntity<Formation> getFormationById(@PathVariable int id) {
         Formation formation = formationRepo.findById(id).orElseThrow(() -> new RuntimeException("No such Formation with id " + id));
+        return ResponseEntity.ok(formation);
+    }
+
+    @GetMapping("/formations/{name}")
+    public ResponseEntity<Formation> getFormationByName(@PathVariable String name) {
+        Formation formation = formationRepo.findByName(name).orElseThrow(() -> new RuntimeException("No such Formation with id " + name));
         return ResponseEntity.ok(formation);
     }
 

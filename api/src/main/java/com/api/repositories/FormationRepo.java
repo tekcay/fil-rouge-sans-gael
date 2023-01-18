@@ -9,4 +9,5 @@ import java.util.Optional;
 @Repository
 public interface FormationRepo extends JpaRepository<Formation, Integer> {
     Optional<Formation> findById(int id);
+    Optional<Formation> findByName(String name);
 }
