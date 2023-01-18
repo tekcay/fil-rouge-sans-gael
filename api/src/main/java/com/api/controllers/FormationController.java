@@ -33,6 +33,24 @@ public class FormationController {
         return ResponseEntity.ok(formation);
     }
 
+    @GetMapping("/formations/byThemeId/{id}")
+    public ResponseEntity<List<Formation>> getFormationByThemeId(@PathVariable int id) {
+        List<Formation> formationList = formationRepo.findByThemeId(id).orElseThrow(() -> new RuntimeException("No such Formation with id " + id));
+        return ResponseEntity.ok(formationList);
+    }
+
+    @GetMapping("/formations/bySThemeId/{id}")
+    public ResponseEntity<List<Formation>> getFormationBySThemeId(@PathVariable int id) {
+        List<Formation> formationList = formationRepo.findBySThemeId(id).orElseThrow(() -> new RuntimeException("No such Formation with id " + id));
+        return ResponseEntity.ok(formationList);
+    }
+
+    @GetMapping("/formations/bySsThemeId/{id}")
+    public ResponseEntity<List<Formation>> getFormationBySsThemeId(@PathVariable int id) {
+        List<Formation> formationList = formationRepo.findBySsThemeId(id).orElseThrow(() -> new RuntimeException("No such Formation with id " + id));
+        return ResponseEntity.ok(formationList);
+    }
+
     @PostMapping("create-formation")
     public Formation createFormation(@RequestBody Formation formation) {
         return formationRepo.save(formation);
