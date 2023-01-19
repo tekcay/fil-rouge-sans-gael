@@ -30,8 +30,9 @@ public class SsThemeController implements MappingHelper<SsThemeDTO, SsTheme> {
     }
 
     @PostMapping("/create-sstheme")
-    public SsTheme createTheme(@RequestBody SsTheme sstheme) {
-        return ssThemeRepo.save(sstheme);
+    public boolean createSsTheme(@RequestBody SsThemeDTO ssThemeDTO) {
+        ssThemeRepo.save(unMapDTO(ssThemeDTO, SsTheme.class));
+        return true;
     }
 
 
