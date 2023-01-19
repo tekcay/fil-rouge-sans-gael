@@ -7,22 +7,19 @@ import { Stheme } from '../../classes/stheme';
   providedIn: 'root'
 })
 export class SThemeService {
+
   private baseUrl="http://localhost:8080/stheme-controller";
-  constructor(private httpClient: HttpClient) { }
-  get FormationList(): Observable<Stheme[]>{
-    return this.httpClient.get<Stheme[]>(this.baseUrl).pipe(
-      catchError(this.handleError)
-    );
+
+  constructor(private httpClient: HttpClient) {
+
+   }
+
+  public findAll(): Observable<Stheme[]> {
+    return this.httpClient.get<Stheme[]>(this.baseUrl+"/sthemes");
   }
 
- private handleError = (error: Response) => {
-    if (error.status === 400) {
-      return throwError("Bad input error");
-    }
-    if (error.status === 404) {
-      return throwError("Not found error");
-    }
-
-    return throwError("App error");
+  public findById(id: number): Observable<Stheme> {
+    return this.httpClient.get<Stheme>(this.baseUrl+"/getById/" + id);
   }
+
 }
