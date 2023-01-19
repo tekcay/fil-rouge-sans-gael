@@ -4,6 +4,7 @@ import lombok.Data;
 
 import jakarta.persistence.*;
 import java.util.List;
+
 @Data
 @Entity
 @Table(name = "formation")
@@ -12,13 +13,14 @@ public class Formation {
     @Id
     @GeneratedValue
     @Column(name = "id_formation")
-    private int id;
+    private Integer id;
 
     @OneToOne(targetEntity = Formateur.class, mappedBy = "formation")
     private Formateur formateur;
 
+    private String name;
     private boolean isConfirmed;
-    private int minParticipants;
+    private Integer minParticipants;
     private boolean isPerso;
     private boolean isInterEntreprise;
     private String link;

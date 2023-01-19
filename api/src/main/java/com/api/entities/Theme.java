@@ -12,7 +12,7 @@ public class Theme {
     @Id
     @GeneratedValue
     @Column(name = "id_theme")
-    private int id;
+    private Integer id;
 
     private String name;
 

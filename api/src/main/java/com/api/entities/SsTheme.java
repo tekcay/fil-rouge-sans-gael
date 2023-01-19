@@ -13,7 +13,8 @@ public class SsTheme {
     @Id
     @GeneratedValue
     @Column(name = "id_sSTheme")
-    private int id;
+    private Integer id;
+
     private String name;
 
     @ManyToMany(mappedBy = "ssThemes")
