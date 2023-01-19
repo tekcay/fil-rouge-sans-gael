@@ -8,6 +8,7 @@ export class DTOFormation {
   ){}
 
 
+
   public get name(): string {
     return this.name
   }
@@ -15,32 +16,11 @@ export class DTOFormation {
     this.name = value
   }
 
-  public get link(): string {
-    return this.link
-  }
-  public set link(value: string) {
-    this.link = value
-  }
-
-  public get prix(): number {
-    return this.prix
-  }
-  public set prix(value: number) {
-    this.prix = value
-  }
-
   public get description(): string {
     return this.description
   }
   public set description(value: string) {
     this.description = value
-  }
-
-  public get minParticipants(): number {
-    return this.minParticipants
-  }
-  public set minParticipants(value: number) {
-    this.minParticipants = value
   }
 
   public get themeId(): number {

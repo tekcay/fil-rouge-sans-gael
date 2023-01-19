@@ -22,7 +22,7 @@ export class CardsTabBordComponent {
     })
 
     onSubmit() {
-      this.formationService.createFormation(this.formationForm.value);
+      this.formationService.createForma(this.formationForm.value);
     }
 
 }
