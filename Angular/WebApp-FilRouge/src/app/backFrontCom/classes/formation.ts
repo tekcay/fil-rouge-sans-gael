@@ -17,22 +17,22 @@ export class Formation{
     link: string,
     prix: number,
     themeId: number,
-    stheme: number[],
-    sstheme: number[],
+    sousThemesId: number[],
+    ssThemesId: number[],
     description: string
   ){}
 
-public get id(): string {
+public get id(): number {
     return this.id;
   }
-public set id(value: string) {
+public set id(value: number) {
     this.id = value;
   }
 
-  public get formateurId(): string {
+  public get formateurId(): number {
     return this.formateurId;
   }
-  public set formateurId(value: string) {
+  public set formateurId(value: number) {
     this.formateurId = value;
   }
  public get name(): string {
@@ -84,25 +84,25 @@ public set prix(value: number) {
     this.prix = value;
   }
 
-  public get themeId(): string {
+  public get themeId(): number {
     return this.themeId;
   }
-public set themeId(value: string) {
+public set themeId(value: number) {
     this.themeId = value;
   }
 
-  public get stheme(): string[] {
-    return this.stheme;
+  public get sousThemesId(): number[] {
+    return this.sousThemesId;
   }
-public set stheme(value: string[]) {
-    this.stheme = value;
+public set sousThemesId(value: number[]) {
+    this.sousThemesId = value;
   }
 
-  public get sstheme(): string[] {
-    return this.sstheme;
+  public get ssThemesId(): number[] {
+    return this.ssThemesId;
   }
-  public set sstheme(value: string[]) {
-    this.sstheme = value;
+  public set ssThemesId(value: number[]) {
+    this.ssThemesId = value;
   }
 
   public get description(): string {

@@ -11,17 +11,15 @@ export class FormationService {
 
   constructor(private httpClient: HttpClient) {}
 
- private handleError = (error: Response) => {
-    if (error.status === 400) {return throwError("Bad input error");}
-    if (error.status === 404) {return throwError("Not found error");}
-    return throwError("App error");
-  }
 
   public findAll(): Observable<Formation[]> {
     return this.httpClient.get<Formation[]>(this.baseUrl+"/formations");
   }
 
-
+  public createFormation(form: Formation) {
+    console.log(form);
+    this.httpClient.post<Formation>(this.baseUrl+"/createFormation", form);
+  }
 }
 
 
