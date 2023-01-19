@@ -16,19 +16,9 @@ export class CardsTabBordComponent {
     }
 
     formationForm: FormGroup = this.fb.group({
-      id:2,
       name:'',
-      link:'',
-      prix:0,
       description:'',
-      formateurId: 0,
-      isConfirmed: false,
-      minParticipants: 10,
-      isPerso: false,
-      isInterEntreprise: false,
-      themeId: 1,
-      sousThemesId: [1],
-      ssThemesId: [1],
+      themeId: 1
     })
 
     onSubmit() {

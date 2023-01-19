@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, throwError } from 'rxjs';
 import { Formation } from '../../classes/formation';
+import { DTOFormation } from '../../DTO/dtoformation';
 
 @Injectable({
   providedIn: 'root'
@@ -16,9 +17,9 @@ export class FormationService {
     return this.httpClient.get<Formation[]>(this.baseUrl+"/formations");
   }
 
-  public createFormation(form: Formation) {
+  public createFormation(form: DTOFormation) {
     console.log(form);
-    this.httpClient.post<Formation>(this.baseUrl+"/createFormation", form);
+    this.httpClient.post<DTOFormation>(this.baseUrl+"/createFormation", form);
   }
 }
 
