@@ -19,6 +19,7 @@ public class Formation {
     private Formateur formateur;
 
     private String name;
+    private String description;
     private boolean isConfirmed;
     private Integer minParticipants;
     private boolean isPerso;
