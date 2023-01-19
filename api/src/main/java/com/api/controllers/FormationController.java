@@ -82,7 +82,7 @@ public class FormationController implements MappingHelper<FormationDTO, Formatio
         ListFieldRetrieverHelper<SsTheme,SsThemeRepo> ssThemeRetrieverHelper = new ListFieldRetrieverHelper<>();
         List<SsTheme> ssThemesList = ssThemeRetrieverHelper.getListFromId(ssThemesId, ssThemeRepo, SsTheme.class);
 
-        Formation formation = unmapDTO(formationDTO, Formation.class);
+        Formation formation = unMapDTO(formationDTO, Formation.class);
         formation.setTheme(theme);
         formation.setSThemes(sThemesList);
         formation.setSsThemes(ssThemesList);

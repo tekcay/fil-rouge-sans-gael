@@ -1,29 +1,23 @@
 package com.api.helpers;
 
 import org.modelmapper.ModelMapper;
-import org.modelmapper.convention.MatchingStrategies;
 
 import java.util.List;
 
+
 public interface MappingHelper<DTO, T> {
 
+    static ModelMapper modelMapper = new ModelMapper();
 
     default DTO mapToDTO(T toMap, Class<DTO> targetClass) {
-        ModelMapper modelMapper = new ModelMapper();
-        modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
         return modelMapper.map(toMap, targetClass);
     }
 
-    default T unmapDTO(DTO toMap, Class<T> targetClass) {
-        ModelMapper modelMapper = new ModelMapper();
-        modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
+    default T unMapDTO(DTO toMap, Class<T> targetClass) {
         return modelMapper.map(toMap, targetClass);
     }
 
     default List<DTO> mapListToDTO(List<T> list, Class<DTO> targetClass) {
-        ModelMapper modelMapper = new ModelMapper();
-        modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
-
         return list
                 .stream()
                 .map(formation -> modelMapper.map(formation, targetClass))
@@ -31,9 +25,6 @@ public interface MappingHelper<DTO, T> {
     }
 
     default List<T> unmapDTOList(List<DTO> list, Class<T> targetClass) {
-        ModelMapper modelMapper = new ModelMapper();
-        modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
-
         return list
                 .stream()
                 .map(formation -> modelMapper.map(formation, targetClass))
