@@ -3,8 +3,7 @@ import { ISTheme } from "src/app/interfaces/s-theme";
 export class Theme{
   constructor(
     id: string,
-    name: string,
-    SSThemeList: ISTheme[]
+    name: string
   ){}
 
   public get id(): string {
@@ -21,10 +20,4 @@ export class Theme{
     this.name = value;
   }
 
-  public get SThemeList(): ISTheme[] {
-    return this.SThemeList;
-  }
-  public set SThemeList(value: ISTheme[]) {
-    this.SThemeList = value;
-  }
 }

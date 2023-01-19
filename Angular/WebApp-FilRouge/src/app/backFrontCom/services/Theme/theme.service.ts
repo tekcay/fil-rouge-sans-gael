@@ -7,8 +7,11 @@ import { Theme } from '../../classes/theme';
   providedIn: 'root'
 })
 export class ThemeService {
+
   private baseUrl="http://localhost:8080/theme-controller";
+
   constructor(private httpClient: HttpClient) { }
+
   get FormationList(): Observable<Theme[]>{
     return this.httpClient.get<Theme[]>(this.baseUrl).pipe(
       catchError(this.handleError)
