@@ -25,7 +25,7 @@ public class SThemeController implements MappingHelper<SThemeDTO, STheme> {
 
     @GetMapping("/getById/{id}")
     public ResponseEntity<SThemeDTO> getSThemeById(@PathVariable int id) {
-        STheme stheme = sThemeRepo.findById(id).orElseThrow(() -> new RuntimeException("No such Theme with id " + id));
+        STheme stheme = sThemeRepo.findById(id).orElseThrow(() -> new RuntimeException("No such sous Theme with id " + id));
         return ResponseEntity.ok(mapToDTO(stheme, SThemeDTO.class));
     }
 
