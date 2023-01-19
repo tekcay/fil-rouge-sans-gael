@@ -13,7 +13,6 @@ import java.util.List;
 @RequestMapping("/stagiaire-controller")
 public class StagiaireController {
 
-
     @Autowired
     private StagiaireRepo stagiaireRepo;
 

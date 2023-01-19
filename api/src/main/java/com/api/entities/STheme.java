@@ -3,6 +3,7 @@ package com.api.entities;
 import lombok.Data;
 
 import jakarta.persistence.*;
+
 import java.util.List;
 
 @Data
@@ -13,7 +14,7 @@ public class STheme {
     @Id
     @GeneratedValue
     @Column(name = "id_sTheme")
-    private int id;
+    private Integer id;
 
     @ManyToOne(targetEntity = Theme.class)
     @JoinColumn(name = "id_theme")
@@ -29,7 +30,7 @@ public class STheme {
     @JoinTable(name= "sTheme_formation",
             joinColumns = @JoinColumn(name="id_sTheme"),
             inverseJoinColumns = @JoinColumn(name="id_formation"))
-    private List<SsTheme> formations;
+    private List<Formation> formations;
 
     private String name;
 
