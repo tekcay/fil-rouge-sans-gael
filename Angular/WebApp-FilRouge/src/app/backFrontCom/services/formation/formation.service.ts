@@ -11,7 +11,7 @@ export class FormationService {
 
   constructor(private httpClient: HttpClient) { }
 
-  get FormationList(): Observable<Formation[]>{
+  get formationList(): Observable<Formation[]>{
     return this.httpClient.get<Formation[]>(this.baseUrl+"/formations").pipe(catchError(this.handleError));
   }
 
