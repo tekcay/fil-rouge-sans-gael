@@ -23,7 +23,7 @@ public class SsThemeController implements MappingHelper<SsThemeDTO, SsTheme> {
         return mapListToDTO(ssThemeRepo.findAll(), SsThemeDTO.class);
     }
 
-    @GetMapping("/ssthemes/{id}")
+    @GetMapping("/getById/{id}")
     public ResponseEntity<SsThemeDTO> getSThemeById(@PathVariable int id) {
         SsTheme sstheme = ssThemeRepo.findById(id).orElseThrow(() -> new RuntimeException("No such Theme with id " + id));
         return ResponseEntity.ok(mapToDTO(sstheme, SsThemeDTO.class));
