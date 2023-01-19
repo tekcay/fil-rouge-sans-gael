@@ -2,14 +2,14 @@ import { ISTheme } from "src/app/interfaces/s-theme";
 
 export class Theme{
   constructor(
-    id: string,
+    id: number,
     name: string
   ){}
 
-  public get id(): string {
+  public get id(): number {
     return this.id;
   }
-  public set id(value: string) {
+  public set id(value: number) {
     this.id = value;
   }
 
