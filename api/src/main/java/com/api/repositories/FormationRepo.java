@@ -15,7 +15,7 @@ public interface FormationRepo extends JpaRepository<Formation, Integer> {
     Optional<List<Formation>> findByThemeId(int id);
     Optional<List<Formation>> findBysThemesId(int id);
     Optional<List<Formation>> findByssThemesId(int id);
-    boolean deleteById(int id);
+    void deleteById(int id);
     //boolean update(int id);
 
 }
