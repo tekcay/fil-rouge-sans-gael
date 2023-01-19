@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { SharedService } from 'src/app/services/shared-service/shared.service';
+import { SharedService } from 'src/app/backFrontCom/services/shared-service/shared.service';
 
 @Component({
   selector: 'app-links',
