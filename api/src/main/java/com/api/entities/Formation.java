@@ -31,17 +31,17 @@ public class Formation {
 
     private double prix;
 
-    @ManyToOne(targetEntity = Theme.class)
+    @ManyToOne
     @JoinColumn(name = "id_theme")
     private Theme theme;
 
     @ManyToMany(mappedBy = "formationList")
     private List<Stagiaire> stagiaireList;
 
-    @ManyToMany(targetEntity = STheme.class)
+    @ManyToMany(mappedBy = "formations")
     private List<STheme> sThemes;
 
-    @ManyToMany(targetEntity = SsTheme.class)
+    @ManyToMany(mappedBy = "formations")
     private List<SsTheme> ssThemes;
 
     public Formation() {

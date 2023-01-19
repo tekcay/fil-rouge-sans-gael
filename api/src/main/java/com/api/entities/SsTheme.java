@@ -20,7 +20,7 @@ public class SsTheme {
     @ManyToMany(mappedBy = "ssThemes")
     private List<STheme> sThemeList;
 
-    @ManyToMany(targetEntity = Formation.class)
+    @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name= "sSTheme_formation",
             joinColumns = @JoinColumn(name="id_sSTheme"),
             inverseJoinColumns = @JoinColumn(name="id_formation"))

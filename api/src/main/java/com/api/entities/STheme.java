@@ -16,17 +16,17 @@ public class STheme {
     @Column(name = "id_sTheme")
     private Integer id;
 
-    @ManyToOne(targetEntity = Theme.class)
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_theme")
     private Theme theme;
 
-    @ManyToMany(targetEntity = SsTheme.class)
+    @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name= "sTheme_sSTheme",
             joinColumns = @JoinColumn(name="id_sTheme"),
             inverseJoinColumns = @JoinColumn(name="id_sSTheme"))
     private List<SsTheme> ssThemes;
 
-    @ManyToMany(targetEntity = Formation.class)
+    @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name= "sTheme_formation",
             joinColumns = @JoinColumn(name="id_sTheme"),
             inverseJoinColumns = @JoinColumn(name="id_formation"))
