@@ -9,11 +9,7 @@ import { Formation } from '../../classes/formation';
 export class FormationService {
   private baseUrl="http://localhost:8080/formation-controller";
 
-  constructor(private httpClient: HttpClient) {console.log(this.formationList.subscribe())}
-
-  get formationList(): Observable<Formation[]>{
-    return this.httpClient.get<Formation[]>(this.baseUrl+"/formations").pipe(catchError(this.handleError));
-  }
+  constructor(private httpClient: HttpClient) {}
 
  private handleError = (error: Response) => {
     if (error.status === 400) {return throwError("Bad input error");}
