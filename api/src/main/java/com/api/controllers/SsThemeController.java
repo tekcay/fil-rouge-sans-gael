@@ -19,13 +19,13 @@ public class SsThemeController implements MappingHelper<SsThemeDTO, SsTheme> {
     private SsThemeRepo ssThemeRepo;
 
     @GetMapping("/ssthemes")
-    public List<SsThemeDTO> getAllSThemes() {
+    public List<SsThemeDTO> getAllSsThemes() {
         return mapListToDTO(ssThemeRepo.findAll(), SsThemeDTO.class);
     }
 
-    @GetMapping("/ssthemes/{id}")
-    public ResponseEntity<SsThemeDTO> getSThemeById(@PathVariable int id) {
-        SsTheme sstheme = ssThemeRepo.findById(id).orElseThrow(() -> new RuntimeException("No such Theme with id " + id));
+    @GetMapping("/getById/{id}")
+    public ResponseEntity<SsThemeDTO> getSsThemeById(@PathVariable int id) {
+        SsTheme sstheme = ssThemeRepo.findById(id).orElseThrow(() -> new RuntimeException("No such Sous sous Theme with id " + id));
         return ResponseEntity.ok(mapToDTO(sstheme, SsThemeDTO.class));
     }
 

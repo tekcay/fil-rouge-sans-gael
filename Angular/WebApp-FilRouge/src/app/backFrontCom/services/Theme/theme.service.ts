@@ -7,22 +7,19 @@ import { Theme } from '../../classes/theme';
   providedIn: 'root'
 })
 export class ThemeService {
+
   private baseUrl="http://localhost:8080/theme-controller";
-  constructor(private httpClient: HttpClient) { }
-  get FormationList(): Observable<Theme[]>{
-    return this.httpClient.get<Theme[]>(this.baseUrl).pipe(
-      catchError(this.handleError)
-    );
+
+  constructor(private httpClient: HttpClient) {
+
+   }
+
+  public findAll(): Observable<Theme[]> {
+    return this.httpClient.get<Theme[]>(this.baseUrl+"/themes");
   }
 
- private handleError = (error: Response) => {
-    if (error.status === 400) {
-      return throwError("Bad input error");
-    }
-    if (error.status === 404) {
-      return throwError("Not found error");
-    }
-
-    return throwError("App error");
+  public findById(id: number): Observable<Theme> {
+    return this.httpClient.get<Theme>(this.baseUrl+"/getById/" + id);
   }
+
 }

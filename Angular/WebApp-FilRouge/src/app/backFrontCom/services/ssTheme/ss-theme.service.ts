@@ -7,22 +7,21 @@ import { Sstheme } from '../../classes/sstheme';
   providedIn: 'root'
 })
 export class SsThemeService {
+
   private baseUrl="http://localhost:8080/sstheme-controller";
-  constructor(private httpClient: HttpClient) { }
-  get FormationList(): Observable<Sstheme[]>{
-    return this.httpClient.get<Sstheme[]>(this.baseUrl).pipe(
-      catchError(this.handleError)
-    );
+
+  constructor(private httpClient: HttpClient) {
+
+   }
+
+
+  public findAll(): Observable<Sstheme[]> {
+    return this.httpClient.get<Sstheme[]>(this.baseUrl+"/ssthemes");
   }
 
- private handleError = (error: Response) => {
-    if (error.status === 400) {
-      return throwError("Bad input error");
-    }
-    if (error.status === 404) {
-      return throwError("Not found error");
-    }
-
-    return throwError("App error");
+  public findById(id: number): Observable<Sstheme> {
+    return this.httpClient.get<Sstheme>(this.baseUrl+"/getById/" + id);
   }
+
+
 }
