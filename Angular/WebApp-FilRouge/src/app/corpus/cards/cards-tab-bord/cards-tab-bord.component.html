@@ -2,7 +2,51 @@
   <div class="title">
     Tableau de Bord
   </div>
-  <div class="content">
-    contenu de la div
-  </div>
+  <form  [formGroup]="formationForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="nameInput" class="form-label">Titre de la foramtion</label>
+      <input
+        id="nameInput"
+        type="text"
+        formControlName="name"
+        class="form-control"
+      />
+    </div>
+
+    <!-- <div>
+      <label for="link" class="form-label">lien de la formation</label>
+      <input
+        id="link"
+        type="text"
+        formControlName="link"
+        class="form-control"
+      />
+    </div>
+
+    <div>
+      <label for="price" class="form-label">lien de la formation</label>
+      <input
+        id="price"
+        type="number"
+        formControlName="prix"
+        class="form-control"
+      />
+    </div> -->
+
+    <div>
+      <label for="desc" class="form-label">Description</label>
+      <input
+        id="desc"
+        type="text"
+        formControlName="description"
+        class="form-control"
+      />
+    </div>
+
+    <button type="submit">
+      Créer la formation
+    </button>
+
+
+  </form>
 </div>
