@@ -19,7 +19,7 @@ export class ThemeService {
   }
 
   public findById(id: number): Observable<Theme> {
-    return this.httpClient.get<Theme>(this.baseUrl+"/themes/" + id);
+    return this.httpClient.get<Theme>(this.baseUrl+"/getById/" + id);
   }
 
 }
