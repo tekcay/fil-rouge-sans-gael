@@ -4,15 +4,14 @@ import { ISsTheme } from "src/app/interfaces/ss-theme";
 export class Stheme{
 
   constructor(
-    id: string,
-    name: string,
-    SSThemeList: ISsTheme[]
+    id: number,
+    name: string
   ){}
 
-  public get id(): string {
+  public get id(): number {
     return this.id;
   }
-  public set id(value: string) {
+  public set id(value: number) {
     this.id = value;
   }
 
@@ -23,10 +22,4 @@ export class Stheme{
     this.name = value;
   }
 
-  public get SSThemeList(): ISsTheme[] {
-    return this.SSThemeList;
-  }
-  public set SSThemeList(value: ISsTheme[]) {
-    this.SSThemeList = value;
-  }
 }
