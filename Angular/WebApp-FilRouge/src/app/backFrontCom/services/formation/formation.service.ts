@@ -7,22 +7,17 @@ import { Formation } from '../../classes/formation';
   providedIn: 'root'
 })
 export class FormationService {
-  private baseUrl="";
+  private baseUrl="http://localhost:8080/formation-controller";
+
   constructor(private httpClient: HttpClient) { }
+
   get FormationList(): Observable<Formation[]>{
-    return this.httpClient.get<Formation[]>(this.baseUrl).pipe(
-      catchError(this.handleError)
-    );
+    return this.httpClient.get<Formation[]>(this.baseUrl+"/formations").pipe(catchError(this.handleError));
   }
 
  private handleError = (error: Response) => {
-    if (error.status === 400) {
-      return throwError("Bad input error");
-    }
-    if (error.status === 404) {
-      return throwError("Not found error");
-    }
-
+    if (error.status === 400) {return throwError("Bad input error");}
+    if (error.status === 404) {return throwError("Not found error");}
     return throwError("App error");
   }
 }

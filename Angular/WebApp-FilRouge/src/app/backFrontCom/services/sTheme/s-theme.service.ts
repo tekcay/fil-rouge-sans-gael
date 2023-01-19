@@ -7,7 +7,7 @@ import { Stheme } from '../../classes/stheme';
   providedIn: 'root'
 })
 export class SThemeService {
-  private baseUrl="";
+  private baseUrl="http://localhost:8080/stheme-controller";
   constructor(private httpClient: HttpClient) { }
   get FormationList(): Observable<Stheme[]>{
     return this.httpClient.get<Stheme[]>(this.baseUrl).pipe(

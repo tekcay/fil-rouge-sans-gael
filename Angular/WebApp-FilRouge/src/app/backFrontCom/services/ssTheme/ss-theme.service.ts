@@ -7,7 +7,7 @@ import { Sstheme } from '../../classes/sstheme';
   providedIn: 'root'
 })
 export class SsThemeService {
-  private baseUrl="";
+  private baseUrl="http://localhost:8080/sstheme-controller";
   constructor(private httpClient: HttpClient) { }
   get FormationList(): Observable<Sstheme[]>{
     return this.httpClient.get<Sstheme[]>(this.baseUrl).pipe(
@@ -20,7 +20,7 @@ export class SsThemeService {
       return throwError("Bad input error");
     }
     if (error.status === 404) {
-      return throwError("Not found error"));
+      return throwError("Not found error");
     }
 
     return throwError("App error");

@@ -8,22 +8,19 @@ import { ITheme } from "src/app/interfaces/theme";
 export class Formation{
   constructor(
     id: string,
+    formateurId: string,
     name: string,
-    description: string,
-    theme: ITheme,
-    stheme: ISTheme[],
-    sstheme: ISsTheme[],
-    seances: ISeance[],
-    formateurs: IFormateur[],
     isConfirmed: boolean,
+    minParticipants: number,
     isPerso: boolean,
-    isIntra: boolean,
-    minPart: number,
-    nbPart: number,
+    isInterEntreprise: boolean,
     link: string,
-    price: number
+    prix: number,
+    themeId: string,
+    stheme: string[],
+    sstheme: string[],
+    description: string
   ){}
-
 
 public get id(): string {
     return this.id;
@@ -32,11 +29,80 @@ public set id(value: string) {
     this.id = value;
   }
 
-  public get name(): string {
+  public get formateurId(): string {
+    return this.formateurId;
+  }
+  public set formateurId(value: string) {
+    this.formateurId = value;
+  }
+ public get name(): string {
     return this.name;
   }
-  public set name(value: string) {
+public set name(value: string) {
     this.name = value;
+  }
+
+public get isConfirmed(): boolean {
+    return this.isConfirmed;
+  }
+public set isConfirmed(value: boolean) {
+    this.isConfirmed = value;
+  }
+
+public get minParticipants(): number {
+    return this.minParticipants;
+  }
+public set minParticipants(value: number) {
+    this.minParticipants = value;
+  }
+
+public get isPerso(): boolean {
+    return this.isPerso;
+  }
+public set isPerso(value: boolean) {
+    this.isPerso = value;
+  }
+
+public get isInterEntreprise(): boolean {
+    return this.isInterEntreprise;
+  }
+public set isInterEntreprise(value: boolean) {
+    this.isInterEntreprise = value;
+  }
+
+public get link(): string {
+    return this.link;
+  }
+public set link(value: string) {
+    this.link = value;
+  }
+
+public get prix(): number {
+    return this.prix;
+  }
+public set prix(value: number) {
+    this.prix = value;
+  }
+
+  public get themeId(): string {
+    return this.themeId;
+  }
+public set themeId(value: string) {
+    this.themeId = value;
+  }
+
+  public get stheme(): string[] {
+    return this.stheme;
+  }
+public set stheme(value: string[]) {
+    this.stheme = value;
+  }
+
+  public get sstheme(): string[] {
+    return this.sstheme;
+  }
+  public set sstheme(value: string[]) {
+    this.sstheme = value;
   }
 
   public get description(): string {
@@ -45,92 +111,6 @@ public set id(value: string) {
   public set description(value: string) {
     this.description = value;
   }
-
-  public get theme(): ITheme {
-    return this.theme;
-  }
-  public set theme(value: ITheme) {
-    this.theme = value;
-  }
-
-
-  public get stheme(): ISTheme[] {
-    return this.stheme;
-  }
-  public set stheme(value: ISTheme[]) {
-    this.stheme = value;
-  }
-
-  public get sstheme(): ISsTheme[] {
-    return this.sstheme;
-  }
-  public set sstheme(value: ISsTheme[]) {
-    this.sstheme = value;
-  }
-
-  public get seances(): ISeance[] {
-    return this.seances;
-  }
-  public set seances(value: ISeance[]) {
-    this.seances = value;
-  }
-
-  public get formateurs(): IFormateur[] {
-    return this.formateurs;
-  }
-  public set formateurs(value: IFormateur[]) {
-    this.formateurs = value;
-  }
-
-  public get isConfirmed(): boolean {
-    return this.isConfirmed;
-  }
-  public set isConfirmed(value: boolean) {
-    this.isConfirmed = value;
-  }
-
-  public get isPerso(): boolean {
-    return this.isPerso;
-  }
-  public set isPerso(value: boolean) {
-    this.isPerso = value;
-  }
-
-  public get isIntra(): boolean {
-    return this.isIntra;
-  }
-  public set isIntra(value: boolean) {
-    this.isIntra = value;
-  }
-
-  public get minPart(): number {
-    return this.minPart;
-  }
-  public set minPart(value: number) {
-    this.minPart = value;
-  }
-
-  public get nbPart(): number {
-    return this.nbPart;
-  }
-  public set nbPart(value: number) {
-    this.nbPart = value;
-  }
-
-  public get link(): string {
-    return this.link;
-  }
-  public set link(value: string) {
-    this.link = value;
-  }
-
-  public get price(): number {
-    return this.price;
-  }
-  public set price(value: number) {
-    this.price = value;
-  }
-
 
 
 }
