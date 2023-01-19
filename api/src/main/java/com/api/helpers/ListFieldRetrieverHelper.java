@@ -3,7 +3,6 @@ package com.api.helpers;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
-import java.util.Set;
 
 /**
  * A class that provides useful methods to retrieve a {@code List<T>} of objects using queries from its corresponding {@code Repository}.
@@ -11,6 +10,7 @@ import java.util.Set;
  * @param <U> type of Spring {@code Repository} used to do the query
  */
 public class ListFieldRetrieverHelper<T, U extends JpaRepository<T, Integer>> {
+
 
 
     public List<T> getListFromId(List<Integer> idList, U repository, Class<T> tClass) {

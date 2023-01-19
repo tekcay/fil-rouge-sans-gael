@@ -28,8 +28,9 @@ public class StagiaireController {
     }
 
     @PostMapping("create-stagiaire")
-    public Stagiaire createStagiaire(@RequestBody Stagiaire stagiaire) {
-        return stagiaireRepo.save(stagiaire);
+    public boolean createStagiaire(@RequestBody Stagiaire stagiaire) {
+        stagiaireRepo.save(stagiaire);
+        return true;
     }
 
 

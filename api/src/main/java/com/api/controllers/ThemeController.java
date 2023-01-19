@@ -30,8 +30,9 @@ public class ThemeController implements MappingHelper<ThemeDTO, Theme> {
     }
 
     @PostMapping("/create-theme")
-    public Theme createTheme(@RequestBody Theme theme) {
-        return themeRepo.save(theme);
+    public boolean createTheme(@RequestBody ThemeDTO themeDTO) {
+        themeRepo.save(unMapDTO(themeDTO, Theme.class));
+        return true;
     }
 
 
