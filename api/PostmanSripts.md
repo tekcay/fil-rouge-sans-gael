@@ -33,6 +33,7 @@ The JSON must be parsed in `Body` as `raw` and `json.`
 * JSON: ``
 {
 "name": "Programmation-Java",
+"description" : "une belle formation",
 "themeId": 1,
 "sousThemesId": [1],
 "ssThemesId": [1]
