@@ -14,7 +14,7 @@ public interface MappingHelper<DTO, T> {
         return modelMapper.map(toMap, targetClass);
     }
 
-    default T reverseMapToDTO(DTO toMap, Class<T> targetClass) {
+    default T unmapDTO(DTO toMap, Class<T> targetClass) {
         ModelMapper modelMapper = new ModelMapper();
         modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
         return modelMapper.map(toMap, targetClass);
@@ -30,7 +30,7 @@ public interface MappingHelper<DTO, T> {
                 .toList();
     }
 
-    default List<T> reverseMapListToDTO(List<DTO> list, Class<T> targetClass) {
+    default List<T> unmapDTOList(List<DTO> list, Class<T> targetClass) {
         ModelMapper modelMapper = new ModelMapper();
         modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
 
