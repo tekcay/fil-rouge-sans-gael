@@ -11,7 +11,7 @@ import java.util.List;
  */
 public interface MappingHelper<DTO, T> {
 
-    static ModelMapper modelMapper = new ModelMapper();
+    ModelMapper modelMapper = new ModelMapper();
 
     /**
      * Maps an entity {@code T} to its corresponding {@code DTO}

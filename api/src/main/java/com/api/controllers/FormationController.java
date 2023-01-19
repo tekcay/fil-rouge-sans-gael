@@ -2,13 +2,9 @@ package com.api.controllers;
 
 import com.api.dto.FormationDTO;
 import com.api.entities.Formation;
-import com.api.entities.STheme;
-import com.api.entities.SsTheme;
-import com.api.entities.Theme;
-
-import com.api.helpers.ListFieldRetrieverHelper;
 import com.api.helpers.MappingHelper;
 import com.api.repositories.*;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
