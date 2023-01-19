@@ -72,9 +72,6 @@ public class FormationController implements MappingHelper<FormationDTO, Formatio
         Integer themeId = formationDTO.getThemeId();
         Theme theme = themeRepo.findById(themeId).orElseThrow(() -> new RuntimeException("No such Theme with id " + themeId));
 
-        String description = formationDTO.getDescription();
-
-
         //TODO to factorize
 
         List<Integer> sThemesId = formationDTO.getSousThemesId();
@@ -86,7 +83,6 @@ public class FormationController implements MappingHelper<FormationDTO, Formatio
         List<SsTheme> ssThemesList = ssThemeRetrieverHelper.getListFromId(ssThemesId, ssThemeRepo, SsTheme.class);
 
         Formation formation = unmapDTO(formationDTO, Formation.class);
-        formation.setName(description);
         formation.setTheme(theme);
         formation.setSThemes(sThemesList);
         formation.setSsThemes(ssThemesList);
