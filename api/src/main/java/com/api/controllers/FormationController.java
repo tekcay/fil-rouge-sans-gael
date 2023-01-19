@@ -68,8 +68,8 @@ public class FormationController implements MappingHelper<FormationDTO, Formatio
         return true;
     }
 
-    @PostMapping("/removeById")
-    public boolean removeFormationById(@RequestBody int id) {
+    @GetMapping("/deleteById/{id}")
+    public boolean deleteById(@PathVariable int id) {
         formationRepo.deleteById(id);
         return true;
     }
