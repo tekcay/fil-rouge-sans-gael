@@ -29,7 +29,7 @@ The JSON must be parsed in `Body` as `raw` and `json.`
 
 ### Create a formation :
 
-* url: `http://localhost:8080/formation-controller/create-formation`
+* url: `http://localhost:8080/formation-controller/createFormation`
 * JSON: ``
 {
 "name": "Programmation-Java",
