@@ -28,8 +28,8 @@ export class FormationService {
     this.httpClient.post<DTOFormation>(this.baseUrl+"/createFormation", form);
   }
 
-  createForma(formaToCreate: any): void {
-    console.log(formaToCreate)
+  createForma(formaToCreate: DTOFormation): void {
+    console.log("toto: "+formaToCreate)
     this.httpClient.post(this.baseUrl, formaToCreate).subscribe(() => {
       this.getFormations();
       this.router.navigate(['createFormation']);

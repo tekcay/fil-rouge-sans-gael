@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Formation } from 'src/app/backFrontCom/classes/formation';
+import { DTOFormation } from 'src/app/backFrontCom/DTO/dtoformation';
 import { FormationService } from 'src/app/backFrontCom/services/formation/formation.service';
 
 @Component({
@@ -27,7 +28,8 @@ export class CardsTabBordComponent {
     })
 
     onSubmit() {
-      this.formationService.createForma(this.formationForm.value);
+      var formDTO: DTOFormation = new DTOFormation(this.formationForm.value.name,this.formationForm.value.description,this.formationForm.value.themeId,[1],[1]);
+      this.formationService.createForma(formDTO);
     }
 
 }
