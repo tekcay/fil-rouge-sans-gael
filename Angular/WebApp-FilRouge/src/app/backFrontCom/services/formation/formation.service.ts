@@ -29,15 +29,16 @@ export class FormationService {
   }
 
   createForma(formaToCreate: any): void {
+    console.log(formaToCreate)
     this.httpClient.post(this.baseUrl, formaToCreate).subscribe(() => {
       this.getFormations();
-      this.router.navigate(['pet', 'index']);
+      this.router.navigate(['createFormation']);
     });
   }
 
   getFormations(): void {
     this.httpClient
-      .get(this.baseUrl)
+      .get(this.baseUrl+"/formations")
       .pipe(
         map((res: any) => {
           const formas: DTOFormation[] = [];

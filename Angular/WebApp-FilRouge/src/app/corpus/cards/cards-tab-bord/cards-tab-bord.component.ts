@@ -9,16 +9,21 @@ import { FormationService } from 'src/app/backFrontCom/services/formation/format
   styleUrls: ['./cards-tab-bord.component.scss']
 })
 export class CardsTabBordComponent {
+  private cache: number[] =[];
 
     constructor(private fb: FormBuilder,private formationService:FormationService){}
 
     ngOnInit():void {
+      this.cache.push(1)
+      console.log(this.cache)
     }
 
     formationForm: FormGroup = this.fb.group({
       name:'',
       description:'',
-      themeId: 1
+      themeId: 0,
+      sousThemesId: [],
+      ssThemesId: []
     })
 
     onSubmit() {
