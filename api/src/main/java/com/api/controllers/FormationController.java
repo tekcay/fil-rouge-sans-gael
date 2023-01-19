@@ -67,28 +67,9 @@ public class FormationController implements MappingHelper<FormationDTO, Formatio
     }
 
     @PostMapping("/createFormation")
-    public FormationDTO createFormation(@RequestBody FormationDTO formationDTO) {
-
-        Integer themeId = formationDTO.getThemeId();
-        Theme theme = themeRepo.findById(themeId).orElseThrow(() -> new RuntimeException("No such Theme with id " + themeId));
-
-        //TODO to factorize
-
-        List<Integer> sThemesId = formationDTO.getSousThemesId();
-        ListFieldRetrieverHelper<STheme,SThemeRepo> sThemeRetrieverHelper = new ListFieldRetrieverHelper<>();
-        List<STheme> sThemesList = sThemeRetrieverHelper.getListFromId(sThemesId, sThemeRepo, STheme.class);
-
-        List<Integer> ssThemesId = formationDTO.getSsThemesId();
-        ListFieldRetrieverHelper<SsTheme,SsThemeRepo> ssThemeRetrieverHelper = new ListFieldRetrieverHelper<>();
-        List<SsTheme> ssThemesList = ssThemeRetrieverHelper.getListFromId(ssThemesId, ssThemeRepo, SsTheme.class);
-
-        Formation formation = unMapDTO(formationDTO, Formation.class);
-        formation.setTheme(theme);
-        formation.setSThemes(sThemesList);
-        formation.setSsThemes(ssThemesList);
-        Formation formationSaved = formationRepo.save(formation);
-
-        return mapToDTO(formationSaved, FormationDTO.class);
+    public boolean createFormation(@RequestBody FormationDTO formationDTO) {
+        formationRepo.save(unMapDTO(formationDTO, Formation.class));
+        return true;
     }
 
     @PostMapping("/removeById")
@@ -96,6 +77,15 @@ public class FormationController implements MappingHelper<FormationDTO, Formatio
         formationRepo.deleteById(id);
         return true;
     }
+
+    @PostMapping("/update/{id}/{isPerso}")
+    public boolean updateFormation(int id, boolean isPerso) {
+        Formation formation = formationRepo.findById(id).orElseThrow(() -> new RuntimeException("No such Theme with id " + id));
+        formation.setPerso(isPerso);
+        formationRepo.save(formation);
+        return true;
+    }
+
 
     //TODO
     /*
@@ -117,13 +107,5 @@ public class FormationController implements MappingHelper<FormationDTO, Formatio
 
     }
     */
-
-    @PostMapping("/update/{id}/{isPerso}")
-    public boolean updateFormation(int id, boolean isPerso) {
-        Formation formation = formationRepo.findById(id).orElseThrow(() -> new RuntimeException("No such Theme with id " + id));
-        formation.setPerso(isPerso);
-        formationRepo.save(formation);
-        return true;
-    }
 
 }
