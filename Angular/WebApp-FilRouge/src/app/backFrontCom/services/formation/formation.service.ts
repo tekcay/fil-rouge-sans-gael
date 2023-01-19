@@ -9,7 +9,7 @@ import { Formation } from '../../classes/formation';
 export class FormationService {
   private baseUrl="http://localhost:8080/formation-controller";
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {console.log(this.formationList.subscribe())}
 
   get formationList(): Observable<Formation[]>{
     return this.httpClient.get<Formation[]>(this.baseUrl+"/formations").pipe(catchError(this.handleError));
@@ -20,6 +20,12 @@ export class FormationService {
     if (error.status === 404) {return throwError("Not found error");}
     return throwError("App error");
   }
+
+  public findAll(): Observable<Formation[]> {
+    return this.httpClient.get<Formation[]>(this.baseUrl+"/formations");
+  }
+
+
 }
 
 

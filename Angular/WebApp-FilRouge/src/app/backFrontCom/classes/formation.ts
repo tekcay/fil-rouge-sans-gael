@@ -7,8 +7,8 @@ import { ITheme } from "src/app/interfaces/theme";
 
 export class Formation{
   constructor(
-    id: string,
-    formateurId: string,
+    id: number,
+    formateurId: number,
     name: string,
     isConfirmed: boolean,
     minParticipants: number,
@@ -16,9 +16,9 @@ export class Formation{
     isInterEntreprise: boolean,
     link: string,
     prix: number,
-    themeId: string,
-    stheme: string[],
-    sstheme: string[],
+    themeId: number,
+    stheme: number[],
+    sstheme: number[],
     description: string
   ){}
 
