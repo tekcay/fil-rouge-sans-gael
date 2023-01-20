@@ -4,6 +4,7 @@ import com.api.dto.UserDTO;
 import com.api.entities.User;
 import com.api.helpers.MappingHelper;
 import com.api.repositories.UserRepo;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -35,4 +36,13 @@ public class UserController implements MappingHelper<UserDTO, User> {
     }
 
 
+    @Override
+    public ModelMapper getMappingModelMapper() {
+        return new ModelMapper();
+    }
+
+    @Override
+    public ModelMapper getUnMappingModelMapper() {
+        return null;
+    }
 }

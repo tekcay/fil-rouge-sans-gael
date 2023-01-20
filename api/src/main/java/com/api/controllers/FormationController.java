@@ -2,9 +2,11 @@ package com.api.controllers;
 
 import com.api.dto.FormationDTO;
 import com.api.entities.Formation;
+import com.api.converters.FormationConverter;
 import com.api.helpers.MappingHelper;
 import com.api.repositories.*;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -26,6 +28,18 @@ public class FormationController implements MappingHelper<FormationDTO, Formatio
     private SThemeRepo sThemeRepo;
     @Autowired
     private SsThemeRepo ssThemeRepo;
+
+    private static final FormationConverter formationConverter = new FormationConverter();
+
+    @Override
+    public ModelMapper getMappingModelMapper() {
+      return formationConverter.getMappingModelMapper();
+    }
+
+    @Override
+    public ModelMapper getUnMappingModelMapper() {
+        return null;
+    }
 
     @GetMapping("/formations")
     public List<FormationDTO> getAllFormation() {

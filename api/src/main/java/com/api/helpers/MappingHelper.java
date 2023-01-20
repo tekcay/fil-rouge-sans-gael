@@ -1,8 +1,10 @@
 package com.api.helpers;
 
+
 import org.modelmapper.ModelMapper;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * An interface to handle mapping a entity of type {@code T} to its corresponding DTO class {@code DTO} and the reverse operation.
@@ -11,7 +13,9 @@ import java.util.List;
  */
 public interface MappingHelper<DTO, T> {
 
-    ModelMapper modelMapper = new ModelMapper();
+    ModelMapper getMappingModelMapper();
+    ModelMapper getUnMappingModelMapper();
+
 
     /**
      * Maps an entity {@code T} to its corresponding {@code DTO}
@@ -20,7 +24,7 @@ public interface MappingHelper<DTO, T> {
      * @return the corresponding {@code DTO}
      */
     default DTO mapToDTO(T toMap, Class<DTO> targetClass) {
-        return modelMapper.map(toMap, targetClass);
+        return getMappingModelMapper().map(toMap, targetClass);
     }
 
     /**
@@ -30,7 +34,7 @@ public interface MappingHelper<DTO, T> {
      * @return the corresponding entity
      */
     default T unMapDTO(DTO toUnMap, Class<T> targetClass) {
-        return modelMapper.map(toUnMap, targetClass);
+        return getMappingModelMapper().map(toUnMap, targetClass);
     }
 
     /**
@@ -42,8 +46,8 @@ public interface MappingHelper<DTO, T> {
     default List<DTO> mapListToDTO(List<T> listToMap, Class<DTO> targetClass) {
         return listToMap
                 .stream()
-                .map(formation -> modelMapper.map(formation, targetClass))
-                .toList();
+                .map(t -> getMappingModelMapper().map(t, targetClass))
+                .collect(Collectors.toList());
     }
 
     /**
@@ -52,10 +56,10 @@ public interface MappingHelper<DTO, T> {
      * @param targetClass the corresponding entity class
      * @return the corresponding {@code List<T>} of entity
      */
-    default List<T> unmapDTOList(List<DTO> listToUnMap, Class<T> targetClass) {
+    default List<T> unMapDTOList(List<DTO> listToUnMap, Class<T> targetClass) {
         return listToUnMap
                 .stream()
-                .map(formation -> modelMapper.map(formation, targetClass))
-                .toList();
+                .map(t -> getMappingModelMapper().map(t, targetClass))
+                .collect(Collectors.toList());
     }
 }

@@ -4,6 +4,7 @@ import com.api.dto.SThemeDTO;
 import com.api.entities.STheme;
 import com.api.helpers.MappingHelper;
 import com.api.repositories.SThemeRepo;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -36,4 +37,13 @@ public class SThemeController implements MappingHelper<SThemeDTO, STheme> {
     }
 
 
+    @Override
+    public ModelMapper getMappingModelMapper() {
+        return new ModelMapper();
+    }
+
+    @Override
+    public ModelMapper getUnMappingModelMapper() {
+        return null;
+    }
 }

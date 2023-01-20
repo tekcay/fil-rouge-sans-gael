@@ -3,7 +3,10 @@ package com.api.entities;
 import lombok.Data;
 
 import jakarta.persistence.*;
+
+import java.util.ArrayList;
 import java.util.List;
+import java.util.function.IntFunction;
 
 @Data
 @Entity
@@ -46,4 +49,5 @@ public class Formation {
 
     public Formation() {
     }
+
 }
