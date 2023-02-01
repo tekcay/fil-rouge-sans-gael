@@ -14,5 +14,4 @@ public interface SThemeRepo extends JpaRepository<STheme, Integer> {
     Optional<STheme> findById(int id);
     @Query("SELECT s FROM sTheme s WHERE s.id IN :ids")
     Optional<List<STheme>> findByListOfId(List<Integer> ids);
-    List<STheme> findAll();
 }
