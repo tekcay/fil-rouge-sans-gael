@@ -20,7 +20,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class MappingHelperTest {
 
     @Test
-    void shouldThemeDTOUnMappedToTheme() {
+    void doesThemeDTOUnMapToTheme() {
 
         ThemeController themeController = new ThemeController();
 
@@ -36,7 +36,7 @@ class MappingHelperTest {
     }
 
     @Test
-    void shouldSThemeDTOUnMappedToSTheme() {
+    void doesSThemeDTOUnMapToSTheme() {
 
         SThemeController sThemeController = new SThemeController();
 
@@ -52,7 +52,7 @@ class MappingHelperTest {
     }
 
     @Test
-    void shouldFormationDTOUnMappedToFormation() {
+    void doesFormationDTOUnMapToFormation() {
         FormationController formationController = new FormationController();
         List<Integer> sThemesId = new ArrayList<>(){{add(1);}};
         List<Integer> ssThemesId = new ArrayList<>(){{add(1);}};
