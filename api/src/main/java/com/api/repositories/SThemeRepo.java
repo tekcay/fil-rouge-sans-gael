@@ -11,5 +11,4 @@ import java.util.Optional;
 public interface SThemeRepo extends JpaRepository<STheme, Integer> {
 
     Optional<STheme> findById(int id);
-    List<STheme> findAll();
 }

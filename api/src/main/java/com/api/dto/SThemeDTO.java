@@ -12,4 +12,8 @@ public class SThemeDTO {
     private Integer id;
     private String name;
 
+    public SThemeDTO( String name) {
+        this.name = name;
+    }
+
 }
